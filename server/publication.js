@@ -1,4 +1,5 @@
 Companies.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
+Slack_c.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 
 Meteor.publish('all.preview', function(){
     return Companies.find({},
