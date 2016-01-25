@@ -1,0 +1,25 @@
+<template name="feedback">
+    <div class="feedback-wrap">
+        <h2>Feedback</h2>
+        <p class="align-left">
+            Cool that you decided to leave your feedback. I hope together with you we will be able to improve the rating of popular technology companies and help people to find a great job.
+        </p>
+        <p class="align-left">
+            Also, you can help improve the ranking of your favorite company :)
+        </p>
+        <form id="form_feedback">
+            <textarea rows="5" name="textarea" id="form_feedback_textarea"></textarea>
+            <button type="submit"><i class="fa fa-rocket"></i> Send Now</button>
+        </form>
+        <p class="color-cc align-left">
+            {{error}}
+        </p>
+        <p class="color-aa align-left">
+            {{good}}
+        </p>
+    </div>
+</template>
+
+<template name="show_feedback">
+    <span id="feedback" class="link">Feedback</span>
+</template>

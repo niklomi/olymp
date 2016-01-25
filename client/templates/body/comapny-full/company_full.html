@@ -1,0 +1,351 @@
+<template name="company_full">
+<div class="big-company-image-wrap relative">
+    <div class="big-company-image" style="background-image: url('/images/{{big_image}}')"></div>
+    <a href="{{link}}" target="_blank" class="url"><i class="fa fa-link"></i></a>
+</div>
+
+<div><div class="table-wrap">
+    <table class="details">
+        <tr>
+            <td class="glava" colspan="2">
+                <h4>
+                    Company
+                </h4>
+            </td>
+        </tr>
+        {{#if full_name}}
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <a href="{{link}}">{{full_name}}</a>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if headquarters}}
+        <tr>
+            <td>
+                Headquarters
+            </td>
+            <td>
+                {{headquarters}}
+            </td>
+        </tr>
+        {{/if}}
+        {{#if founded}}
+        <tr>
+            <td>
+                Founded
+            </td>
+            <td>
+                {{founded}}
+            </td>
+        </tr>
+        {{/if}}
+        {{#if workers_count}}
+        <tr>
+            <td>
+                Employees
+            </td>
+            <td>
+                {{workers_count}}K
+            </td>
+        </tr>
+        {{/if}}
+        {{#if revenue}}
+        <tr>
+            <td>
+                Revenue
+                <p class="little-boy">in 2015</p>
+            </td>
+            <td>
+                {{revenue}}+ Billions
+            </td>
+        </tr>
+        {{/if}}
+        {{#if program_lang}}
+        <tr>
+            <td>
+                Program Languages
+                <p class="little-boy">basic programming languages</p>
+            </td>
+            <td>
+                {{#each program_lang}}
+                    <div class="capsula no-select mar-bot-2">
+                        {{this}}
+                    </div>
+                {{/each}}
+            </td>
+        </tr>
+        {{/if}}
+        {{#if top_universities}}
+        <tr>
+            <td>
+                Universities
+                <p class="little-boy">employees from top 15 universities</p>
+            </td>
+            <td>
+                {{top_universities}}%
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+    </div><div class="table-wrap">
+    <table class="details">
+        <tr>
+            <td class="glava">
+                <h4>
+                    Work
+                </h4>
+            </td>
+            <td class="glava">
+                <p class="little-boy" id="faq-grades" data-toggle="tooltip" data-placement="top" title="Show useful information about grades  A,B,C,F">(What's {{grade people_rating}} mean?)</p>
+            </td>
+        </tr>
+        {{#if people_rating}}
+        <tr>
+            <td>
+                Employees Rating
+                <p class="little-boy">based on glassdoor rank</p>
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color people_rating}}">
+                    {{grade people_rating}}
+                </div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if work_life_balance}}
+        <tr>
+            <td>
+                Work/Life Balance
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color work_life_balance}}">{{grade work_life_balance}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if senior_management}}
+        <tr>
+            <td>
+                Senior Management
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color senior_management}}">{{grade senior_management}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if culture}}
+        <tr>
+            <td>
+                Culture
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color culture}}">{{grade culture}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if benefits}}
+        <tr>
+            <td>
+                Benefits
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color benefits}}">{{grade benefits}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if opportunities}}
+        <tr>
+            <td>
+                Opportunities
+            </td>
+            <td>
+                <div class="grade grade_{{grade_color opportunities}}">{{grade opportunities}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if remote_friendly}}
+        <tr>
+            <td>
+                Remote Work Friendly
+            </td>
+            <td>
+                {{capitalize remote_friendly}}
+            </td>
+        </tr>
+        {{/if}}
+        {{#if nationality}}
+        <tr>
+            <td>
+                Nationality
+            </td>
+            <td>
+                {{#with nationality}}
+                    {{national}}
+                {{/with}}
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+</div>
+<div><div class="table-wrap">
+    <table class="details">
+        <tr>
+            <td class="glava">
+                <h4>Salary</h4>
+            </td>
+            <td class="glava">
+                <p class="little-boy">
+                    average salary/year
+                </p>
+            </td>
+        </tr>
+        {{#if s_soft_engineer}}
+        <tr>
+            <td>
+                Software Engineer
+            </td>
+            <td>
+                $ {{s_soft_engineer}},000
+            </td>
+        </tr>
+        {{/if}}
+        {{#if s_soft_senior_engineer}}
+        <tr>
+            <td>
+                Software Senior Engineer
+            </td>
+            <td>
+                $ {{s_soft_senior_engineer}},000
+            </td>
+        </tr>
+        {{/if}}
+        {{#if s_product_manager}}
+        <tr>
+            <td>
+                Product Manager
+            </td>
+            <td>
+                $ {{s_product_manager}},000
+            </td>
+        </tr>
+        {{/if}}
+        {{#if s_product_senior_manager}}
+        <tr>
+            <td>
+                Product Senior Manager
+            </td>
+            <td>
+                $ {{s_product_senior_manager}},000
+            </td>
+        </tr>
+        {{/if}}
+        {{#if s_system_engineer}}
+        <tr>
+            <td>
+                System Engineer
+            </td>
+            <td>
+                $ {{s_system_engineer}},000
+            </td>
+        </tr>
+        {{/if}}
+        {{#if s_project_manager}}
+        <tr>
+            <td>
+                Project Manager
+            </td>
+            <td>
+                $ {{s_project_manager}},000
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+    </div><div class="table-wrap">
+    <table class="details">
+        <tr>
+            <td class="glava" colspan="2">
+                <h4>Interview</h4>
+            </td>
+        </tr>
+        {{#if interview_difficulty}}
+        <tr>
+            <td>
+                Interview Difficulty
+                <p class="little-boy">based on glassdoor data</p>
+            </td>
+            <td>
+                <div class="capsula grade_{{interview_difficulty_color interview_difficulty}}">{{grade_interview_difficulty interview_difficulty}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if interview_experience}}
+        <tr>
+            <td>
+                Interview Experience
+                <p class="little-boy">
+                    enjoyed the interview
+                </p>
+            </td>
+            <td>
+                <div class="capsula grade_{{interview_experience_color interview_experience}}">{{grade_interview_experience interview_experience}}</div>
+            </td>
+        </tr>
+        {{/if}}
+        {{#if entry_degree}}
+        <tr>
+            <td>
+                Entry Degree
+                <p class="little-boy">
+                    master or PhD
+                </p>
+            </td>
+            <td>
+                {{entry_degree}}%
+            </td>
+        </tr>
+        {{/if}}
+        {{#if entry_schools}}
+        <tr>
+            <td>
+                Entry Schools
+            </td>
+            <td>
+                {{#with entry_schools}}
+                    {{{schools}}}
+                {{/with}}
+            </td>
+        </tr>
+        {{/if}}
+        {{#if entry_major}}
+        <tr>
+            <td>
+                Entry Major
+            </td>
+            <td>
+                {{#with entry_major}}
+                    {{{major}}}
+                {{/with}}
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+    </div>
+</div>
+<div class="action-wrap text-center">
+    <p>Found a mistake or know more information about {{name}}? Share it with us!</p>
+    <div class="edit button"><i class="fa fa-pencil-square-o"></i> Edit</div>
+</div>
+{{#if isInRole 'admin'}}
+<div>
+    Panel: <button class="admin_edit">Update</button>
+</div>
+{{/if}}
+{{#if sub_ready}}
+{{else}}
+    {{> loading}}
+{{/if}}
+</template>

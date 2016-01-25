@@ -1,0 +1,47 @@
+@import '{}/client/style/stylus.import';
+
+.overlay_wrap
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 900;
+    background-color: rgba(255,255,255,0.97);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100vh
+    .overlay
+        display: inline-block;
+        vertical-align: middle;
+        outline: none;
+        overflow: hidden;
+        max-width: 58rem;
+        padding:5rem 0;
+        -webkit-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        -ms-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        table
+            text-align:left
+
+.button--close
+    font-size: 32px;
+    padding: 10px 20px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-style: normal;
+    color: $text-grey-color !important
+    background-color: transparent !important
+    border-color: transparent !important
+    border:none !important
+    &:hover
+        color: $text-grey-color

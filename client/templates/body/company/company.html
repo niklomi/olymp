@@ -1,0 +1,50 @@
+<template name="company">
+    <tr class="no-select pointer tr-company {{#if show_full_info}} active-tr {{/if}}">
+        <td>
+            <div class="bold grade grade_{{rating_color rating}}">
+                {{rating}}
+            </div>
+        </td>
+        <td>
+            <div class="company-image" style="background-image: url('/images/{{image}}');">
+
+            </div>
+        </td>
+        <td class="company-name align-left">
+            <p class="bold">
+                {{name}}
+            </p>
+        </td>
+        <td class="align-left hide-900">
+            <p class="align-left tiny text-grey">
+                {{headquarters}}
+            </p>
+        </td>
+        <td class="hide-630">
+            <p class="tiny text-grey">
+                {{workers_count}}
+            </p>
+        </td>
+        <td class="align-right">
+            <p class="tiny text-grey">
+                {{average_salary}}
+            </p>
+        </td>
+        <td class="hide-390">
+            <div class="grade grade_{{grade_color people_rating}}">{{grade people_rating}}</div>
+        </td>
+        <td class="hide-460">
+            <div class="grade grade_{{grade_color work_life_balance}}">{{grade work_life_balance}}</div>
+        </td>
+        <td class="hide-540">
+            <div class="capsula grade_{{interview_experience_color interview_experience}}">{{grade_interview_experience interview_experience}}</div>
+        </td>
+    </tr>
+    {{#if show_full_info}}
+    <tr class="full-info">
+        <td colspan="99">
+            {{> company_full}}
+        </td>
+    </tr>
+    {{/if}}
+</template>

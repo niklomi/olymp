@@ -1,0 +1,34 @@
+<template name="user_edit">
+    <div class="edit-wrap">
+        {{#if who_improve}}
+        {{#if Template.subscriptionsReady}}
+            <h2>Improve {{name}} ranking</h2>
+            <form id="user_edit_form">
+                <div class="form_group">
+                    <label>What would you like to improve?</label>
+                    <input type="text" max-width="50" id="key" placeholder="Software Engenieer Salary" autocomplete="off">
+                </div>
+                <div class="form_group">
+                    <label>Enter your value</label>
+                    <input type="text" max-width="200" id="value" placeholder="$ 149,000" autocomplete="off">
+                </div>
+                <div class="form_group">
+                    <label>How to check your information?</label>
+                    <input type="text" max-width="100" id="url" placeholder="Link to the reliable source" autocomplete="off">
+                </div>
+                <button type="submit"><i class="fa fa-pencil-square-o"></i> Submit</button>
+            </form>
+            <p class="color-cc align-left">
+                {{error}}
+            </p>
+            <p class="color-aa align-left">
+                {{good}}
+            </p>
+        {{else}}
+            {{> loading}}
+        {{/if}}
+        {{else}}
+            <h2>Something went wrong <a href="/">main page</a></h2>
+        {{/if}}
+    </div>
+</template>

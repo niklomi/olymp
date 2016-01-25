@@ -1,0 +1,140 @@
+@import 'stylus.import'
+
+html
+	height: 101%
+
+body
+	font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif
+	color:$text-main-color
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga" on;
+
+html, body
+	color:$text-main-color
+
+h1,h2,h3,h4,h5,h6,p, ul
+	padding:0
+	margin:0
+
+a
+	outline: none
+	color: $color-link
+	&:hover, &:focus, &:active
+		outline: none
+		color: $text-main-color
+	&:hover, &:focus
+		text-decoration:none
+		border-bottom: 2px solid
+	border-bottom: 2px solid transparent;
+
+.link
+	color: $color-link
+	cursor:pointer
+	&:hover, &:focus, &:active
+		border-bottom: 2px solid
+		color:$text-main-color
+	border-bottom: 2px solid transparent;
+
+.no-border
+	border: none !important
+
+b, strong
+	font-weight: 600
+
+.container-x
+	max-width: 1000px
+	margin: 0px auto
+	position: relative
+
+.relative
+	position: relative
+
+.tiny
+	font-weight:200 !important
+
+.text-grey
+	color: $text-grey-color
+
+.bold
+	font-weight:600 !important
+
+.normal
+	font-weight: 400 !important
+
+.inline-block
+	display:inline-block
+
+.pointer
+	cursor: pointer
+
+.no-select
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+input
+	display: block;
+	width: 100%;
+	height: 4rem;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: $text-main-color
+	outline: none;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid $text-grey-color;
+	border-radius: 4px;
+
+textarea
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: $text-main-color;
+	outline: none;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid  $text-grey-color;
+	border-radius: 4px;
+
+label
+	font-weight: 400 !important
+	font-size: 18px;
+
+th
+	font-weight: 600
+
+.align-left
+	text-align: left !important
+
+.align-right
+	text-align: right !important
+
+.hide-900
+	@media(max-width:900px)
+		display: none
+
+.hide-630
+	@media(max-width:630px)
+		display: none
+
+.hide-540
+	@media(max-width:540px)
+		display: none
+
+.hide-460
+	@media(max-width:460px)
+		display: none
+
+.hide-390
+	@media(max-width:390px)
+		display: none
+
+.width-100-sm
+	@media(max-width:768px)
+		width:100%

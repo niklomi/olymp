@@ -1,0 +1,32 @@
+@import '{}/client/style/stylus.import';
+
+.header
+    padding:1.5rem 0.5rem;
+    .links
+        @media(max-width: 700px)
+            display:none
+        position: absolute
+        right: 0
+        top: 0
+        margin-top:1rem
+        text-transform: uppercase
+        font-weight: 600
+        a, .link
+            margin: 0 1rem
+            &:fisrt-child
+                margin: 0rem
+            &:last-child
+                margin: 0rem
+            color: $text-main-color
+            border:none
+            &:hover
+                color:$main-color
+    h1
+        font-size: 28px;
+        color: $main-color
+        &:hover
+            color: $main-color
+    .description
+        display:block
+        color: $text-grey-color
+        font-size: 16px

@@ -1,0 +1,30 @@
+@import '{}/client/style/stylus.import';
+
+.rating-table
+    width:100%
+    margin-top: 1rem;
+    tr
+        td, th
+            text-align: center;
+            &:first-child
+                padding-left:0.5rem
+            &:last-child
+                padding-right:0.5rem
+            font-size: 16px
+        th
+            font-weight: 600
+            font-size: 16px
+            padding: 1rem 0.5rem
+    .full-info
+        td
+            text-align:left
+    .th-company
+        padding: 0 0 0 1rem;
+        min-width:18rem
+        @media(max-width: 740px)
+            min-width: 0;
+
+#footer
+    margin:2rem 0.5rem
+    #add_new_company
+        margin: 2rem 0 4rem

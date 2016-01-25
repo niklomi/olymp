@@ -1,0 +1,36 @@
+<template name="table">
+    <div class="container-x">
+        <table class="rating-table">
+            <tr class="no-select">
+                <th><i class="fa fa-trophy"></i></th>
+                <th class="align-left th-company" colspan="2">Company</th>
+                <th class="align-left hide-900">Headquarters</th>
+                <th class="hide-630">Employees</th>
+                <th class="align-right">Avg. Salary</th>
+                <th class="hide-390">People Rating</th>
+                <th class="hide-460">Work/Life</th>
+                <th class="hide-540">Interview</th>
+            </tr>
+                {{#each companies}}
+                    {{> company}}
+                {{/each}}
+        </table>
+        {{#unless ready}}
+            {{> loading}}
+        {{else}}
+        <div id="footer">
+            <div class="text-center">
+                <div id="add_new_company">
+                    <a href="/about#newcompany" class="button width-100-sm" >Add company</a>
+                </div>
+                <p class="text-grey">
+                    For all your suggestions we have {{> show_feedback}}
+                </p>
+                <p class="text-grey">
+                    TechFights — <a href="/about">ABOUT</a> — <a href="/about#contact">Contact</a>
+                </p>
+            </div>
+        </div>
+        {{/unless}}
+    </div>
+</template>

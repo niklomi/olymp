@@ -1,0 +1,10 @@
+<template name="update_company">
+    <div class="container-x">
+        <form id="update_company">
+            <div class="col-xs-12">
+                <h1 class="text-center">Update</h1>
+                {{> quickForm collection="Companies" doc=one id="updateCompanies" type="method-update" meteormethod="update_company"}}
+            </div>
+        </form>
+    </div>
+</template>

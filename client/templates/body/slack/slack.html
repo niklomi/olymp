@@ -1,0 +1,40 @@
+<template name="slack">
+<div class="about-wrap container-x slack-about">
+    <h2>Join {{slack.name}} on <span class="red-color"><i class="fa fa-slack"></i> Slack</span></h2>
+    <div class="give-me-invite-slack">
+        {{#unless invite}}
+        	<form id="slack-form">
+        		<input type="email" placeholder="you@yourdomain.com" />
+        		<button type="submit" class="button button-action button-main">Get My Invite</button>
+        	</form>
+        	{{#if error}}
+        		<div class="message error">{{error}}</div>
+        	{{/if}}
+        {{else}}
+        	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong> on <div id="slack-photo"></div></div>
+        {{/unless}}
+    </div>
+    <h2>Slack Community</h2>
+    <p>
+        We want to make a community where people can share their work experience and be able to find new useful contacts.
+        If you are working in large companies like Google and Facebook or working in small startups then Join us :)
+    </p>
+    <p>
+        Answers to these questions you can find on our Slack
+    </p>
+    <ul class="ul-useful-links">
+        <li>
+            - How to work as a designer in Apple?
+        </li>
+        <li>
+            - What is it like working with Larry Page and Sergey Brin?
+        </li>
+        <li>
+            - How can I prepare myself to be a software engineer at Facebook?
+        </li>
+        <li>
+            - What is the interview process like at Twitter?
+        </li>
+    </ul>
+</div>
+</template>

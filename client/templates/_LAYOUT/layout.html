@@ -1,0 +1,12 @@
+<template name="layout">
+    {{> Template.dynamic template=login}}
+
+    <section class="header">
+        {{> Template.dynamic template=header}}
+    </section>
+    {{> Template.dynamic template=poloska}}
+    {{> Template.dynamic template=body}}
+    {{#if show_overlay}}
+        {{> overlay}}
+    {{/if}}
+</template>

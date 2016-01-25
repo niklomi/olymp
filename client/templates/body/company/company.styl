@@ -1,0 +1,184 @@
+    @import '{}/client/style/stylus.import';
+
+.capsula
+    border-radius:4px
+    font-size: 10px;
+    text-transform: uppercase;
+    display:inline-block
+    padding: 6px 8px;
+    font-weight: 600;
+    border:2px solid
+
+.grade
+    border-radius:50%
+    color: $text-grey-color
+    display: inline-block
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    font-size:16px
+    line-height: 2.9rem;
+
+.grade_aa
+    background: $color-aa
+    color:#FFF
+    border-color:transparent
+
+.grade_bb
+    background: $color-bb
+    color:#FFF
+    border-color:transparent
+
+.grade_cc
+    background: $color-cc
+    color:#FFF
+    border-color:transparent
+
+.grade_dd
+    background: $color-dd
+    color:#FFF
+    border-color:transparent
+
+.grade_ff
+    background: $color-ff
+    color:#FFF
+    border-color:transparent
+
+.red-color
+    color: $color-cc
+
+.mar-bot-2
+    margin-bottom:0.2rem
+
+#faq-grades
+    text-decoration:underline;
+    cursor:pointer
+
+.little-boy
+    font-size: 10px
+    color: $text-grey-color
+
+.active-tr
+    background: $color-light-grey;
+    td
+        p
+            color: $text-main-color
+    .company-name
+        p
+            border-bottom: 2px solid !important
+
+.tr-company
+    &:hover
+        background: $color-light-grey;
+        td
+            p
+                color: $text-main-color
+        .company-name
+            p
+                border-bottom: 2px solid
+    td
+        padding: 1.5rem 0.5rem
+        .company-image
+            width: 3rem;
+            height: 3rem;
+            background-size: cover;
+            display: inline-block;
+        p
+            display: inline-block
+    .company-name
+        padding-left: 1rem;
+        font-size: 16px
+        p
+            border-bottom: 2px solid transparent;
+
+.full-info
+    td
+        .action-wrap
+            margin: 1rem 0;
+            p
+                margin-bottom: 1rem;
+                font-weight:600
+            button
+                margin:0
+                @media(max-width:768px)
+                    width:100%
+        padding: 0.5rem;
+        .big-company-image-wrap
+            background: $text-main-color
+            @media(max-width:768px)
+                .url
+                    visibility: visible !important
+                    opacity: 1 !important
+                    border-color: #fff !important
+                    i
+                        color:#FFF!important
+                .big-company-image
+                    opacity: .7;
+            &:hover
+                .url
+                    visibility: visible;
+                    opacity: 1;
+                .big-company-image
+                    opacity: .7;
+            .url
+                &:hover
+                    border-color: #fff;
+                    i
+                        color:#FFF
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 6rem;
+                height: 6rem;
+                margin: -3rem 0 0 -3rem;
+                border: 2px solid $color-light-grey;
+                border-radius: 50%;
+                overflow: hidden;
+                visibility: hidden;
+                opacity: 0;
+                -webkit-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+                i
+                    display: block;
+                    width: 6rem;
+                    height: 6rem;
+                    text-align: center;
+                    font-size: 4rem;
+                    line-height: 6rem;
+                    color: $color-light-grey;
+                    position:relative
+                    right:1px
+                    -webkit-transition: all .25s ease-out;
+                    transition: all .25s ease-out;
+            .big-company-image
+                height:30rem
+                width:100%
+                background-size:cover
+                background-position: 100% 50%
+                @media(max-width:768px)
+                    height:20rem
+        .details
+            width:100%
+            tr
+                td
+                    font-size:16px
+                    vertical-align: top;
+                    &:nth-child(1)
+                        width:50%
+                    &:nth-child(2)
+                        width:50%
+                        text-align:right;
+                .glava
+                    padding-top: 1.5rem
+                    padding-bottom: 0.5rem
+                    h4
+                        font-weight:600
+                        display: inline-block
+                        border-bottom:2px solid
+        .table-wrap
+            width:50%
+            display:inline-block
+            vertical-align: top
+            @media(max-width:768px)
+                width: 100%
