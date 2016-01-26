@@ -16,3 +16,14 @@ Template.table.helpers({
         return Template.instance().ready.get();
     }
 });
+
+Template.table.events({
+    'click #add_new_company': function(){
+        let data = {
+            template: "overlay_text",
+            title: "How to add new company?",
+            text: "Currently most of the data is dependent on the opinions of employees and if you can provide all the necessary data (like every company has in list), or show me where I can take it, then <a href='/about#contact'>contact</a>  me."
+        }
+        Session.set('overlay', data);
+    }
+});

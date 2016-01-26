@@ -5,7 +5,7 @@
 <template name="about">
     <div class="container-x">
         <section class="about-wrap">
-            <h2>Useful links</h2>
+            <h2><i class="fa fa-book"></i> Useful links</h2>
             <p>
             <ul class="ul-useful-links">
                 <li>
@@ -15,32 +15,36 @@
                     {{> show_feedback}} - You have some ideas on how to improve the project? Great! Share them with us.
                 </li>
                 <li>
+                    <span class="link" id="add_new_company">Add Company</span> - If you want to add a new company which is not present in our list
+                </li>
+                <li>
                     <a href="/slack"><i class="fa fa-slack"></i> Slack</a> - Join our community and learn more about working in tech companies.
                 </li>
             </ul>
             </p>
-            <h2 id="contact">Contact</h2>
+            <h2 id="contact"><i class="fa fa-envelope-o"></i> Contact</h2>
             <p>
                 For business inquiries and for great ideas you can write me on <span class="red-color">{{my_email}}</span>. If you want to talk about this project or to ask me some questions, just write me on twitter <a href="https://twitter.com/{{my_twitter}}">@{{my_twitter}}</a>. For your suggestions about improving ranking system, companies data and other stuff, we have {{> show_feedback}}.
+            </p>
+            <h2 class="text-center text-grey">FAQ</h2>
+            <h2>What is {{my_project}}?</h2>
+            <p>
+                {{my_project}} is ranking of the best and well-known technology companies and startups that are located all over the world (most of them in Silicon Valley). We "index" companies and assign a certain number of points to them <span class="text-grey">(more points <i class="fa fa-long-arrow-right"></i> better company)</span>. As a result you can find your "best place to work" and compare the large number of parameters such as the average salary, the opinion of employees, adequacy of management and many more.
+            </p>
+            <p>
+                The maximum number of points – <div class="bold grade grade_{{rating_color 100}}">100</div><br>
+                The minimum number of points – <div class="bold grade grade_{{rating_color 1}}">1</div>
+            </p>
+            <p>
+                All our information based on reliable data and opinions of employees.
             </p>
             <h2>How the project was created?</h2>
             <p>
                 This project would not exist without the super <a href="https://nomadlist.com">Nomad List</a>. I liked their way of a rating system, for me it was something new and creative and I decided to make their concept for technology companies.
             </p>
-            <h2>What is {{my_project}}?</h2>
-            <p>
-                {{my_project}} is ranking of the best and well-known technology companies and startups that are located all over the world (most of them in Silicon Valley). We "index" companies and assign a certain number of points to them (more points = better company). As a result you can find your "best place to work" and compare the large number of parameters such as the average salary, the opinion of employees, adequacy of management and many more.
-            </p>
-            <p>
-                The maximum number of points - 100<br>
-                The minimum number of points - 1
-            </p>
-            <p>
-                All our information based on reliable data and opinions of employees.
-            </p>
             <h2 id="newcompany">How to add new company?</h2>
             <p>
-                Currently most of the data is dependent on the opinions of employees and if you can provide all the necessary data (like every company has in list), or show me where I can take them, then <a href="/about#contact">contact</a>  me.
+                Currently most of the data is dependent on the opinions of employees and if you can provide all the necessary data (like every company has in list), or show me where I can take it, then <a href="/about#contact">contact</a>  me.
             </p>
             <h2>How to edit wrong data?</h2>
             <p>

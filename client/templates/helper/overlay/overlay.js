@@ -9,7 +9,7 @@ Template.overlay.onRendered(function(){
 });
 
 Template.overlay.events({
-    'click .button--close': function(event){
+    'click .button--close, click a': function(event){
         Session.set('overlay',false);
     }
 });

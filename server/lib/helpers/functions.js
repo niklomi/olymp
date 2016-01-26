@@ -14,3 +14,7 @@ addhttp = function (url) {
 	}
 	return url;
 }
+
+inProduction = function () {
+	return process.env.NODE_ENV === "production";
+};

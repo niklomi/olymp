@@ -11,6 +11,46 @@ update_all_rating = function(make_null = false){
     });
 }
 
+Meteor.methods({
+    insert_company: function(data){
+        if (!Meteor.user() && !Roles.userIsInRole(Meteor.userId(), ['admin'])) return false;
+        Schema.CompaniesSchema.validate(data);
+
+        Companies.insert(data);
+    },
+    update_company: function(data, id){
+        if (!Meteor.user() && !Roles.userIsInRole(Meteor.userId(), ['admin'])) return false;
+        check(id, String);
+        Schema.CompaniesSchema.validate(data, {modifier: true});
+
+        Companies.update(id, data);
+    },
+    user_edit: function(data){
+        check(data,{
+            key: String,
+            value: String,
+            url: String,
+            name: String
+        });
+
+        Slack.send({
+          text: "Edit",
+          channel: "olymp_user_edit",
+          attachments: [
+            {
+              fallback: "Edit company",
+              fields: [
+                { title: "Key", value: data.key },
+                { title: "Value", value: data.value },
+                { title: "Approve", value: data.url },
+                { title: "Company Name", value: data.name }
+              ]
+            }
+          ]
+        });
+    }
+})
+
 insert_beta_companies = function(){
     _.each(beta_companies, function(data){
         if (data.nationality)
