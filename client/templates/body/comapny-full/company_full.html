@@ -49,7 +49,7 @@
                 Employees
             </td>
             <td>
-                {{workers_count}}K
+                {{workers_count}},000+
             </td>
         </tr>
         {{/if}}
@@ -179,7 +179,7 @@
         {{#if nationality}}
         <tr>
             <td>
-                Nationality
+                Nationality <i class="fa fa-users"></i>
             </td>
             <td>
                 {{#with nationality}}
@@ -311,7 +311,7 @@
         {{#if entry_schools}}
         <tr>
             <td>
-                Entry Schools
+                Entry Schools <i class="fa fa-university"></i>
             </td>
             <td>
                 {{#with entry_schools}}
@@ -323,7 +323,7 @@
         {{#if entry_major}}
         <tr>
             <td>
-                Entry Major
+                Entry Major <i class="fa fa-graduation-cap"></i>
             </td>
             <td>
                 {{#with entry_major}}
@@ -335,10 +335,21 @@
     </table>
     </div>
 </div>
+
 <div class="action-wrap text-center">
     <p>Found a mistake or know more information about {{name}}? Share it with us!</p>
-    <div class="edit button"><i class="fa fa-pencil-square-o"></i> Edit</div>
+    <div class="edit button width-100-sm"><i class="fa fa-pencil-square"></i> Edit</div>
 </div>
+
+<div class="tweet-it">
+    <p>
+        ${{s_soft_engineer}},000 - Average salary of Sofware Engineer in {{name}}
+    </p>
+    {{#with twitt_it}}
+        <a class="button button--tweet width-100-sm" href="https://twitter.com/intent/tweet?text={{text}}&url={{url}}&hashtags={{hashtags}}"><i class="fa fa-twitter"></i> Tweet</a>
+    {{/with}}
+</div>
+
 {{#if isInRole 'admin'}}
 <div>
     Panel: <button class="admin_edit">Update</button>

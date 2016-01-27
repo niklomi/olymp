@@ -5,7 +5,7 @@ if (inProduction()){
 	};
 
 	var favorite_words = '@tech_fights OR #tech_fights',
-	query_word = 'IT companies rating OR tech startups ranking';
+	query_word = 'IT companies';
 
 	SyncedCron.add({
 		name: 'Twi_make_favorite',
@@ -17,11 +17,9 @@ if (inProduction()){
 				if (!err && data.statuses.length > 0) {
 					var tweets = data.statuses;
 					var randomTweet = randIndex(tweets);
-					if (randomTweet.favorited === false){
-						T.post('favorites/create', {id : randomTweet.id_str},function (err, response) {
-							if (err) console.log('/ query_favorites/create Error: ', err);
-						});
-					}
+					T.post('favorites/create', {id : randomTweet.id_str},function (err, response) {
+						if (err && err.code !== 139) console.log('/ query_favorites/create Error: ', err);
+					});
 				}
 				else if(err) { console.log('search/tweet Error: ', err);}
 			});
@@ -30,11 +28,9 @@ if (inProduction()){
 				if (!err && data.statuses.length > 0) {
 					var tweets = data.statuses;
 					var randomTweet = randIndex(tweets);
-					if (randomTweet.favorited === false){
-						T.post('favorites/create', {id : randomTweet.id_str},function (err, response) {
-							if (err && err.code !== 139) console.log('/ my_favorites/create Error: ', err);
-						});
-					}
+					T.post('favorites/create', {id : randomTweet.id_str},function (err, response) {
+						if (err && err.code !== 139) console.log('/ my_favorites/create Error: ', err);
+					});
 				}
 				else if (err){ console.log('search/tweet Error: ', err);}
 			});

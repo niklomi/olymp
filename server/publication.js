@@ -4,7 +4,7 @@ Slack_c.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 Meteor.publish('all.preview', function(){
     return Companies.find({},
         {
-            sort : {rating: -1, average_salary: -1, company: -1, people_rating: -1},
+            sort : {rating: -1, name: 1, average_salary: -1, people_rating: -1},
             fields: {
                 name: 1, rating: 1, image:1, headquarters:1, workers_count: 1, average_salary: 1,
                 people_rating: 1, work_life_balance: 1, interview_experience: 1

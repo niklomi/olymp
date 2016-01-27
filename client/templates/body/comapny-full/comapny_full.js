@@ -20,4 +20,12 @@ Template.company_full.helpers({
     major: function(){
         return this.join('<br>');
     },
+    twitt_it: function(){
+        let text = encodeURI(`$${this.s_soft_engineer},000 - Average salary of Sofware Engineer in ${this.name}`),
+        url = encodeURI("http://techfights.com"),
+        hashtags = encodeURI(this.name.toLowerCase()),
+        data = {text,url,hashtags};
+
+        return data;
+    }
 });

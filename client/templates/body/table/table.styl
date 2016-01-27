@@ -3,6 +3,10 @@
 .rating-table
     width:100%
     margin-top: 1rem;
+    .rating-table-header
+        .active-th
+            background-color: $color-light-grey
+            color: $main-color
     tr
         td, th
             text-align: center;
@@ -16,6 +20,9 @@
             font-size: 16px
             padding: 1rem 0.5rem 0
             vertical-align: top;
+            cursor:pointer
+            &:hover
+                color: $main-color
     .full-info
         td
             text-align:left

@@ -108,19 +108,9 @@
             background: $text-main-color
             @media(max-width:768px)
                 .url
-                    visibility: visible !important
-                    opacity: 1 !important
                     border-color: #fff !important
                     i
                         color:#FFF!important
-                .big-company-image
-                    opacity: .7;
-            &:hover
-                .url
-                    visibility: visible;
-                    opacity: 1;
-                .big-company-image
-                    opacity: .7;
             .url
                 &:hover
                     border-color: #fff;
@@ -136,8 +126,7 @@
                 border: 2px solid $color-light-grey;
                 border-radius: 50%;
                 overflow: hidden;
-                visibility: hidden;
-                opacity: 0;
+                opacity: 1;
                 -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out;
                 i
@@ -153,6 +142,7 @@
                     -webkit-transition: all .25s ease-out;
                     transition: all .25s ease-out;
             .big-company-image
+                opacity: .7;
                 height:30rem
                 width:100%
                 background-size:cover

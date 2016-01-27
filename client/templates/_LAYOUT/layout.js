@@ -1,5 +1,7 @@
 Template.layout.onCreated(function(){
-	Session.setDefault('overlay',false);
+	Session.setDefault('overlay', false);
+	Session.setDefault('sortorder', 1);
+	Session.setDefault('sort', false);
 });
 
 Template.layout.onRendered(function(){

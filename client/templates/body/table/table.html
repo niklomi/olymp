@@ -1,15 +1,15 @@
 <template name="table">
     <div class="container-x">
         <table class="rating-table">
-            <tr class="no-select">
-                <th><i class="fa fa-star"></i><p class="little-boy">points</p></th>
-                <th class="align-left th-company" colspan="2">Company</th>
-                <th class="align-left hide-900">Headquarters</th>
-                <th class="hide-630">Employees</th>
-                <th class="align-right">Avg. Salary</th>
-                <th class="hide-390">People Rating<p class="little-boy">employees rank</p></th>
-                <th class="hide-460">Work/Life<p class="little-boy">W/L balance</p></th>
-                <th class="hide-540">Interview<p class="little-boy">interview experience</p></th>
+            <tr class="no-select rating-table-header">
+                <th id="srt_rating" title="Sort by companies points"><i class="fa fa-star" ></i><p class="little-boy">points</p></th>
+                <th class="align-left th-company {{#if active "name"}}active-th{{/if}}" colspan="2" id="srt_name"  title="Sort by companies names">Company</th>
+                <th class="align-left hide-900 {{#if active "headquarters"}}active-th{{/if}}" id="srt_headquarters" title="Sort by companies headquarters">Headquarters</th>
+                <th class="hide-630 {{#if active "workers_count"}}active-th{{/if}}" id="srt_workers_count" title="Sort by employees count">Employees</th>
+                <th class="align-right {{#if active "average_salary"}}active-th{{/if}}" id="srt_average_salary" title="Sort by average salary">Avg. Salary</th>
+                <th class="hide-390 {{#if active "people_rating"}}active-th{{/if}}" id="srt_people_rating" title="Sort by employees rating">People Rating<p class="little-boy">employees rank</p></th>
+                <th class="hide-460 {{#if active "work_life_balance"}}active-th{{/if}}" id="srt_work_life_balance" title="Sort by work/life balance">Work/Life<p class="little-boy">W/L balance</p></th>
+                <th class="hide-540 {{#if active "interview_experience"}}active-th{{/if}}" id="srt_interview_experience" title="Sort by interview experience">Interview<p class="little-boy">interview experience</p></th>
             </tr>
                 {{#each companies}}
                     {{> company}}
