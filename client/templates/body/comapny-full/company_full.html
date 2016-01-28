@@ -3,7 +3,7 @@
     <div class="big-company-image" style="background-image: url('/images/{{big_image}}')"></div>
     <a href="{{link}}" target="_blank" class="url"><i class="fa fa-link"></i></a>
 </div>
-
+{{#if sub_ready}}
 <div><div class="table-wrap">
     <table class="details">
         <tr>
@@ -343,7 +343,7 @@
 
 <div class="tweet-it">
     <p>
-        ${{s_soft_engineer}},000 - Average salary of Sofware Engineer in {{name}}
+        ${{average_salary}},000 - Average salary of Sofware Engineer in {{name}}
     </p>
     {{#with twitt_it}}
         <a class="button button--tweet width-100-sm" href="https://twitter.com/intent/tweet?text={{text}}&url={{url}}&hashtags={{hashtags}}"><i class="fa fa-twitter"></i> Tweet</a>
@@ -355,7 +355,7 @@
     Panel: <button class="admin_edit">Update</button>
 </div>
 {{/if}}
-{{#if sub_ready}}
+
 {{else}}
     {{> loading}}
 {{/if}}

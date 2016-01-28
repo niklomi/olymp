@@ -1,26 +1,50 @@
 <template name="slack">
-<div class="about-wrap container-x slack-about">
-    <h2>Join {{slack.name}} on <span class="red-color"><i class="fa fa-slack"></i> Slack</span></h2>
-    <div class="give-me-invite-slack">
-        {{#unless invite}}
-        	<form id="slack-form">
-        		<input type="email" placeholder="you@yourdomain.com" />
-        		<button type="submit" class="button button-action button-main">Get My Invite</button>
-        	</form>
-        	{{#if error}}
-        		<div class="message error">{{error}}</div>
-        	{{/if}}
-        {{else}}
-        	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong> on <div id="slack-photo"></div></div>
-        {{/unless}}
+<div class="slack-img-wrap">
+    <div class="image"></div>
+    <div class="text-wrap">
+        <div class="text">
+            <a class="no-border" href="/"><div class="logo"></div></a>
+            <h1>
+                What it's like to work in the <br />
+                best IT companies in the world?
+            </h1>
+            <h2>
+                Join our community on <i class="fa fa-slack"></i> Slack
+            </h2>
+            <div class="give-me-invite-slack">
+                {{#unless invite}}
+                	<form id="slack-form">
+                		<input type="email" placeholder="you@yourdomain.com" />
+                		<button type="submit" class="button button-action button-main">Get My Invite</button>
+                	</form>
+                	{{#if error}}
+                		<div class="message error">{{error}}</div>
+                	{{/if}}
+                {{else}}
+                	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong></div>
+                {{/unless}}
+            </div>
+        </div>
     </div>
-    <h2>Slack Community</h2>
+</div>
+<div class="about-wrap container-x slack-about">
+    <h2><i class="fa fa-slack"></i> Slack Chat</h2>
     <p>
-        We want to make a community where people can share their work experience and be able to find new useful contacts.
-        If you are working in large companies like Google and Facebook or working in small startups then Join us :)
+        We want to make a community where people can share their work experience and be able to find new useful contacts in tech world.
+    </p>
+    <h2>What big community can give?</h2>
+    <p>Just imagine..</p>
+    <p>
+        There is a large group of different people as engineers, designers, managers, directors from different companies and startups who love to learn new things and share their experiences.
     </p>
     <p>
-        Answers to these questions you can find on our Slack
+        It's magic.
+    </p>
+    <p>
+        Real situation: You want to work as Engineer in Twitter and would like to learn more about the company (work process, benefits, senior management) and you know that there is a community that will help you.
+    </p>
+    <p>
+        You can find anything and talk to anyone. With big community you can easily find answers to these questions:
     </p>
     <ul class="ul-to-p">
         <li>
@@ -34,6 +58,23 @@
         </li>
         <li>
             What is the interview process like at Twitter?
+        </li>
+    </ul>
+    <h2>
+        For whom this community?
+    </h2>
+    <p>
+        Join us If you:
+    </p>
+    <ul class="ul-to-p">
+        <li>
+            Working in large companies <span class="text-grey">(Google, Facebook, Microsoft..)</span>
+        </li>
+        <li>
+            Working in small startups
+        </li>
+        <li>
+            Want to know how people work and how to get this work
         </li>
     </ul>
 </div>

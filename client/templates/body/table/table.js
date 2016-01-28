@@ -3,7 +3,7 @@ Template.table.onCreated(function(){
     self.ready = new ReactiveVar();
     self.active = new ReactiveVar();
     self.autorun(function(){
-        let handle = PostSubs.subscribe('all.preview');
+        let handle = _tableSub.subscribe('companies');
         self.ready.set(handle.ready());
     });
 });

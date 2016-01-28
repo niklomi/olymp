@@ -1,7 +1,11 @@
 Companies.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 Slack_c.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 
-Meteor.publish('all.preview', function(){
+Meteor.publish('companies', function(id){
+    if (id){
+        check(id, String);
+        return Companies.find(id);
+    }
     return Companies.find({},
         {
             sort : {rating: -1, name: 1, average_salary: -1, people_rating: -1},
@@ -11,11 +15,6 @@ Meteor.publish('all.preview', function(){
             }
         }
     );
-});
-
-Meteor.publish('single', function(id){
-    check(id, String);
-    return Companies.find(id);
 });
 
 Meteor.publish('single.edit', function(id){

@@ -47,7 +47,6 @@ Meteor.methods({
 					var data = HTTP.call("POST", url, {
 						params: data
 					}).data;
-					console.log(data);
 				} catch(e) {
 					console.log(e);
 				}

@@ -7,17 +7,18 @@ button, .button
     background-color: $main-color
     color: #fff
     min-width: 6rem;
+    height: 4rem;
     padding: 7px 15px;
     font-weight: 600;
     font-size: 16px;
     display: inline-block
     cursor:pointer
-    -webkit-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: all .05s ease-in-out;
+    -o-transition: all .05s ease-in-out;
+    transition: all .05s ease-in-out;
     &:hover
-        background-color: lighten($main-color, 20%)
-        border-color: lighten($main-color, 20%)
+        background-color: lighten($main-color, 15%)
+        border-color: lighten($main-color, 15%)
         color: #fff
     &:focus
         border: 2px solid $main-color
@@ -42,10 +43,22 @@ button, .button
     border-color: #fff
     color: #55ACEE
     &:hover
-        background-color: darken(#fff, 5%)
-        border-color: darken(#fff, 5%)
-        color: #55ACEE
+        background-color: #55ACEE
+        border-color: #fff
+        color: #fff
     &:focus
         border: 2px solid #fff
         color: #55ACEE
         background-color: #fff
+
+.button--tweet--reverse
+    background-color: #FFF
+    color: #55ACEE
+    &:hover
+        background-color: #55ACEE
+        border-color: #55ACEE
+        color: #fff
+    &:focus
+        border-color:#55ACEE
+        color: #FFF
+        background-color: #55ACEE

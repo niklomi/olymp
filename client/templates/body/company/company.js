@@ -16,12 +16,21 @@ Template.company.helpers({
     },
     workers_count: function(){
         return `${this.workers_count}K`;
+    },
+    twitt_it: function(){
+        let text = encodeURI(`$${this.average_salary},000 - Average salary of Sofware Engineer in ${this.name}`),
+        url = encodeURI("http://techfights.com"),
+        hashtags = encodeURI(this.name.toLowerCase()),
+        data = {text,url,hashtags};
+
+        return data;
     }
 });
 
 Template.company.events({
-    'click .tr-company': function(event, template){
-        template.show_full_info.set(! template.show_full_info.get());
+    'click .td-tweet , click .tr-company': function(e,t){
+        e.stopPropagation;
+        t.show_full_info.set(! t.show_full_info.get());
     },
     'click .admin_edit': function(event,template){
         let id = this._id;

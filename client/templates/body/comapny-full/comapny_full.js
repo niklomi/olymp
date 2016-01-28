@@ -3,7 +3,7 @@ Template.company_full.onCreated(function(){
     self.ready = new ReactiveVar();
 
     self.autorun(function(){
-        let handle = PostSubs.subscribe('single', _id);
+        let handle = _singleSub.subscribe('companies', _id);
         self.ready.set(handle.ready());
     });
 });

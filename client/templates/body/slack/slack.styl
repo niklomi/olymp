@@ -1,3 +1,4 @@
+@import '{}/client/style/stylus.import';
 .give-me-invite-slack
 	.slack-info
 		font-size: 18px
@@ -29,12 +30,50 @@
 			line-height: 1.8;
 			font-size: 18px;
 
-#slack-photo
-	background-image: url('/images/Slack%20RGB.png');
-	background-size: cover;
-	height: 36px;
-	right: 5px;
-	top: 6px;
-	position: relative;
-	display: inline-block;
-	width: 100px;
+.slack-img-wrap
+	background: $text-main-color
+	position: relative
+	overflow: hidden
+	background: rgba(0,0,0,0.5)
+	text-align: center;
+	&:before
+		content: '';
+		position: absolute;
+		background: transparent url("/images/slack_back.jpg") no-repeat scroll 0% 100%;
+		background-size:cover
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1
+		width: 100%
+	.text-wrap
+		text-align: center;
+		.text
+			color:#FFF
+			display: inline-block;
+			overflow: hidden;
+			padding: 3rem 1rem 6rem
+			h1
+				font-size:42px
+				font-weight: 600
+				@media(max-width:768px)
+					font-size:32px
+				@media(max-width:500px)
+					font-size:28px
+			h2
+				font-size:28px
+				font-weight: 600
+				margin: 2rem 0 1rem
+				display: inline-block;
+				@media(max-width:768px)
+					font-size:20px
+			.logo
+				background-image: url('/images/logo.png');
+				display:inline-block
+				width:10rem
+				height:10rem
+				background-size:cover
+				@media(max-width:768px)
+					width:7rem
+					height:7rem
