@@ -6,6 +6,6 @@ rating = function(data){
     opportunities = data.opportunities,
     management = data.senior_management;
 
-    let rating = ((salary / 1.8) * 0.5 ) + (work_life * 0.05) + (management * 0.05) + (benefits * 0.05) + (opportunities * 0.05) + (people_rating * 0.3);
+    let rating = ((salary / 1.8) * 0.45 ) + (work_life * 0.1) + (management * 0.1) + (benefits * 0.05) + (opportunities * 0.05) + (people_rating * 0.25);
     return Math.round(rating);
 }

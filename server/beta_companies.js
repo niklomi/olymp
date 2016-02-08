@@ -25,12 +25,12 @@ beta_companies = [
       "entry_major": "Computer Science;Computer Engineering;Engineering",
       "entry_degree": "23%",
       "interview_experience": "56",
-      "s_soft_engineer": "127",
-      "s_soft_senior_engineer": "161",
-      "s_product_manager": "148",
-      "s_product_senior_manager": "200",
-      "s_system_engineer": "110",
-      "s_project_manager": "117"
+      "soft_engineer": "127",
+      "soft_senior_engineer": "161",
+      "product_manager": "148",
+      "product_senior_manager": "200",
+      "system_engineer": "110",
+      "project_manager": "117"
     },
     {
       "name": "Facebook",
@@ -55,15 +55,15 @@ beta_companies = [
       "remote_friendly": "yes",
       "nationality": "US;IN;IT",
       "entry_schools": "Stanford;UC Berkeley;U of Texas",
-      "entry_major": "Computer Science;Computer engineering;business management",
+      "entry_major": "Computer Science;Computer engineering;Business management",
       "entry_degree": "29%",
       "interview_experience": "60",
-      "s_soft_engineer": "125",
-      "s_soft_senior_engineer": "161",
-      "s_product_manager": "146",
-      "s_product_senior_manager": "143",
-      "s_system_engineer": "111",
-      "s_project_manager": "108"
+      "soft_engineer": "125",
+      "soft_senior_engineer": "161",
+      "product_manager": "146",
+      "product_senior_manager": "143",
+      "system_engineer": "111",
+      "project_manager": "108"
     },
     {
       "name": "Microsoft",
@@ -91,12 +91,12 @@ beta_companies = [
       "entry_major": "Computer Science;Computer Engineering;Business Management",
       "entry_degree": "27%",
       "interview_experience": "64",
-      "s_soft_engineer": "104",
-      "s_soft_senior_engineer": "137",
-      "s_product_manager": "116",
-      "s_product_senior_manager": "131",
-      "s_system_engineer": "103",
-      "s_project_manager": "102"
+      "soft_engineer": "104",
+      "soft_senior_engineer": "137",
+      "product_manager": "116",
+      "product_senior_manager": "131",
+      "system_engineer": "103",
+      "project_manager": "102"
     },
     {
       "name": "Apple",
@@ -124,12 +124,12 @@ beta_companies = [
       "entry_major": "computer science;business management;engineering",
       "entry_degree": "20%",
       "interview_experience": "66",
-      "s_soft_engineer": "121",
-      "s_soft_senior_engineer": "147",
-      "s_product_manager": "130",
-      "s_product_senior_manager": "170",
-      "s_system_engineer": "108",
-      "s_project_manager": "110"
+      "soft_engineer": "121",
+      "soft_senior_engineer": "147",
+      "product_manager": "130",
+      "product_senior_manager": "170",
+      "system_engineer": "108",
+      "project_manager": "110"
     },
     {
       "name": "Uber",
@@ -153,9 +153,9 @@ beta_companies = [
       "remote_friendly": "yes",
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "interview_experience": "50",
-      "s_soft_engineer": "115",
-      "s_soft_senior_engineer": "149",
-      "s_system_engineer": "103"
+      "soft_engineer": "115",
+      "soft_senior_engineer": "149",
+      "system_engineer": "103"
     },
     {
       "name": "LinkedIn",
@@ -183,11 +183,11 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management;Computer Engineering",
       "entry_degree": "32%",
       "interview_experience": "54",
-      "s_soft_engineer": "132",
-      "s_soft_senior_engineer": "153",
-      "s_product_manager": "136",
-      "s_product_senior_manager": "157",
-      "s_system_engineer": "128"
+      "soft_engineer": "132",
+      "soft_senior_engineer": "153",
+      "product_manager": "136",
+      "product_senior_manager": "157",
+      "system_engineer": "128"
     },
     {
       "name": "Amazon",
@@ -215,12 +215,12 @@ beta_companies = [
       "entry_major": "computer science;computer engineering;engineering",
       "entry_degree": "28%",
       "interview_experience": "56",
-      "s_soft_engineer": "100",
-      "s_soft_senior_engineer": "124",
-      "s_product_manager": "117",
-      "s_product_senior_manager": "127",
-      "s_system_engineer": "97",
-      "s_project_manager": "88"
+      "soft_engineer": "100",
+      "soft_senior_engineer": "124",
+      "product_manager": "117",
+      "product_senior_manager": "127",
+      "system_engineer": "97",
+      "project_manager": "88"
     },
     {
       "name": "Adobe",
@@ -248,12 +248,12 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management",
       "entry_degree": "26%",
       "interview_experience": "66",
-      "s_soft_engineer": "103",
-      "s_soft_senior_engineer": "134",
-      "s_product_manager": "133",
-      "s_product_senior_manager": "155",
-      "s_system_engineer": "125",
-      "s_project_manager": "100"
+      "soft_engineer": "103",
+      "soft_senior_engineer": "134",
+      "product_manager": "133",
+      "product_senior_manager": "155",
+      "system_engineer": "125",
+      "project_manager": "100"
     },
     {
       "name": "Intel",
@@ -281,12 +281,12 @@ beta_companies = [
       "entry_major": "Electrical Engineering;Engineering;Computer Science",
       "entry_degree": "34%",
       "interview_experience": "71",
-      "s_soft_engineer": "105",
-      "s_soft_senior_engineer": "117",
-      "s_product_manager": "123",
-      "s_product_senior_manager": "136",
-      "s_system_engineer": "108",
-      "s_project_manager": "95"
+      "soft_engineer": "105",
+      "soft_senior_engineer": "117",
+      "product_manager": "123",
+      "product_senior_manager": "136",
+      "system_engineer": "108",
+      "project_manager": "95"
     },
     {
       "name": "IBM",
@@ -314,12 +314,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Business Management;Engineering",
       "entry_degree": "20%",
       "interview_experience": "68",
-      "s_soft_engineer": "86",
-      "s_soft_senior_engineer": "119",
-      "s_product_manager": "114",
-      "s_product_senior_manager": "136",
-      "s_system_engineer": "74",
-      "s_project_manager": "92"
+      "soft_engineer": "86",
+      "soft_senior_engineer": "119",
+      "product_manager": "114",
+      "product_senior_manager": "136",
+      "system_engineer": "74",
+      "project_manager": "92"
     },
     {
       "name": "HP",
@@ -347,12 +347,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science",
       "entry_degree": "18%",
       "interview_experience": "69",
-      "s_soft_engineer": "97",
-      "s_soft_senior_engineer": "121",
-      "s_product_manager": "115",
-      "s_product_senior_manager": "140",
-      "s_system_engineer": "89",
-      "s_project_manager": "98"
+      "soft_engineer": "97",
+      "soft_senior_engineer": "121",
+      "product_manager": "115",
+      "product_senior_manager": "140",
+      "system_engineer": "89",
+      "project_manager": "98"
     },
     {
       "name": "Oracle",
@@ -380,12 +380,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "25%",
       "interview_experience": "69",
-      "s_soft_engineer": "114",
-      "s_soft_senior_engineer": "111",
-      "s_product_manager": "108",
-      "s_product_senior_manager": "120",
-      "s_system_engineer": "84",
-      "s_project_manager": "104"
+      "soft_engineer": "114",
+      "soft_senior_engineer": "111",
+      "product_manager": "108",
+      "product_senior_manager": "120",
+      "system_engineer": "84",
+      "project_manager": "104"
     },
     {
       "name": "Netflix",
@@ -413,9 +413,9 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "24%",
       "interview_experience": "36",
-      "s_soft_engineer": "141",
-      "s_soft_senior_engineer": "208",
-      "s_product_manager": "124"
+      "soft_engineer": "141",
+      "soft_senior_engineer": "208",
+      "product_manager": "124"
     },
     {
       "name": "Hulu",
@@ -443,10 +443,10 @@ beta_companies = [
       "entry_major": "Communication/Journalism;Computer & Information Sciences;Computer Science",
       "entry_degree": "18%",
       "interview_experience": "55",
-      "s_soft_engineer": "116",
-      "s_soft_senior_engineer": "167",
-      "s_product_manager": "116",
-      "s_system_engineer": "89"
+      "soft_engineer": "116",
+      "soft_senior_engineer": "167",
+      "product_manager": "116",
+      "system_engineer": "89"
     },
     {
       "name": "Yahoo!",
@@ -474,12 +474,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "27%",
       "interview_experience": "56",
-      "s_soft_engineer": "118",
-      "s_soft_senior_engineer": "134",
-      "s_product_manager": "121",
-      "s_product_senior_manager": "144",
-      "s_system_engineer": "105",
-      "s_project_manager": "102"
+      "soft_engineer": "118",
+      "soft_senior_engineer": "134",
+      "product_manager": "121",
+      "product_senior_manager": "144",
+      "system_engineer": "105",
+      "project_manager": "102"
     },
     {
       "name": "AOL",
@@ -506,12 +506,12 @@ beta_companies = [
       "entry_major": "Business Management;Computer & Information Sciences;Computer Science",
       "entry_degree": "16%",
       "interview_experience": "58",
-      "s_soft_engineer": "102",
-      "s_soft_senior_engineer": "117",
-      "s_product_manager": "100",
-      "s_product_senior_manager": "115",
-      "s_system_engineer": "95",
-      "s_project_manager": "89"
+      "soft_engineer": "102",
+      "soft_senior_engineer": "117",
+      "product_manager": "100",
+      "product_senior_manager": "115",
+      "system_engineer": "95",
+      "project_manager": "89"
     },
     {
       "name": "Dell",
@@ -539,12 +539,12 @@ beta_companies = [
       "entry_major": "Business Management;Computer & Information Sciences;Computer Science",
       "entry_degree": "18%",
       "interview_experience": "68",
-      "s_soft_engineer": "90",
-      "s_soft_senior_engineer": "117",
-      "s_product_manager": "109",
-      "s_product_senior_manager": "133",
-      "s_system_engineer": "99",
-      "s_project_manager": "95"
+      "soft_engineer": "90",
+      "soft_senior_engineer": "117",
+      "product_manager": "109",
+      "product_senior_manager": "133",
+      "system_engineer": "99",
+      "project_manager": "95"
     },
     {
       "name": "SAP",
@@ -572,11 +572,11 @@ beta_companies = [
       "entry_major": "Business Management;Computer & Information Sciences",
       "entry_degree": "28%",
       "interview_experience": "75",
-      "s_soft_engineer": "93",
-      "s_soft_senior_engineer": "122",
-      "s_product_manager": "125",
-      "s_product_senior_manager": "137",
-      "s_project_manager": "114"
+      "soft_engineer": "93",
+      "soft_senior_engineer": "122",
+      "product_manager": "125",
+      "product_senior_manager": "137",
+      "project_manager": "114"
     },
     {
       "name": "Red Hat",
@@ -604,9 +604,9 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "26%",
       "interview_experience": "66",
-      "s_soft_engineer": "86",
-      "s_soft_senior_engineer": "109",
-      "s_project_manager": "67"
+      "soft_engineer": "86",
+      "soft_senior_engineer": "109",
+      "project_manager": "67"
     },
     {
       "name": "VMware",
@@ -634,12 +634,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "32%",
       "interview_experience": "67",
-      "s_soft_engineer": "111",
-      "s_soft_senior_engineer": "135",
-      "s_product_manager": "128",
-      "s_product_senior_manager": "153",
-      "s_system_engineer": "116",
-      "s_project_manager": "121"
+      "soft_engineer": "111",
+      "soft_senior_engineer": "135",
+      "product_manager": "128",
+      "product_senior_manager": "153",
+      "system_engineer": "116",
+      "project_manager": "121"
     },
     {
       "name": "Ebay",
@@ -667,12 +667,12 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management",
       "entry_degree": "28%",
       "interview_experience": "56",
-      "s_soft_engineer": "102",
-      "s_soft_senior_engineer": "119",
-      "s_product_manager": "113",
-      "s_product_senior_manager": "132",
-      "s_system_engineer": "129",
-      "s_project_manager": "103"
+      "soft_engineer": "102",
+      "soft_senior_engineer": "119",
+      "product_manager": "113",
+      "product_senior_manager": "132",
+      "system_engineer": "129",
+      "project_manager": "103"
     },
     {
       "name": "Twitter",
@@ -700,11 +700,11 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management;Computer Engineering",
       "entry_degree": "33%",
       "interview_experience": "40",
-      "s_soft_engineer": "127",
-      "s_soft_senior_engineer": "153",
-      "s_product_manager": "145",
-      "s_system_engineer": "115",
-      "s_project_manager": "75"
+      "soft_engineer": "127",
+      "soft_senior_engineer": "153",
+      "product_manager": "145",
+      "system_engineer": "115",
+      "project_manager": "75"
     },
     {
       "name": "EA",
@@ -732,12 +732,12 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management;Computer Engineering",
       "entry_degree": "14%",
       "interview_experience": "63",
-      "s_soft_engineer": "92",
-      "s_soft_senior_engineer": "131",
-      "s_product_manager": "89",
-      "s_product_senior_manager": "118",
-      "s_system_engineer": "93",
-      "s_project_manager": "79"
+      "soft_engineer": "92",
+      "soft_senior_engineer": "131",
+      "product_manager": "89",
+      "product_senior_manager": "118",
+      "system_engineer": "93",
+      "project_manager": "79"
     },
     {
       "name": "Zynga",
@@ -765,12 +765,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "26%",
       "interview_experience": "52",
-      "s_soft_engineer": "112",
-      "s_soft_senior_engineer": "133",
-      "s_product_manager": "124",
-      "s_product_senior_manager": "134",
-      "s_system_engineer": "100",
-      "s_project_manager": "104"
+      "soft_engineer": "112",
+      "soft_senior_engineer": "133",
+      "product_manager": "124",
+      "product_senior_manager": "134",
+      "system_engineer": "100",
+      "project_manager": "104"
     },
     {
       "name": "Cisco",
@@ -798,12 +798,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Business Management;Computer Science",
       "entry_degree": "27%",
       "interview_experience": "68",
-      "s_soft_engineer": "118",
-      "s_soft_senior_engineer": "125",
-      "s_product_manager": "143",
-      "s_product_senior_manager": "147",
-      "s_system_engineer": "120",
-      "s_project_manager": "110"
+      "soft_engineer": "118",
+      "soft_senior_engineer": "125",
+      "product_manager": "143",
+      "product_senior_manager": "147",
+      "system_engineer": "120",
+      "project_manager": "110"
     },
     {
       "name": "Juniper",
@@ -831,12 +831,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "31%",
       "interview_experience": "64",
-      "s_soft_engineer": "125",
-      "s_soft_senior_engineer": "131",
-      "s_product_manager": "150",
-      "s_product_senior_manager": "166",
-      "s_system_engineer": "124",
-      "s_project_manager": "119"
+      "soft_engineer": "125",
+      "soft_senior_engineer": "131",
+      "product_manager": "150",
+      "product_senior_manager": "166",
+      "system_engineer": "124",
+      "project_manager": "119"
     },
     {
       "name": "Rackspace",
@@ -864,12 +864,12 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "16%",
       "interview_experience": "62",
-      "s_soft_engineer": "98",
-      "s_soft_senior_engineer": "156",
-      "s_product_manager": "123",
-      "s_product_senior_manager": "125",
-      "s_system_engineer": "85",
-      "s_project_manager": "70"
+      "soft_engineer": "98",
+      "soft_senior_engineer": "156",
+      "product_manager": "123",
+      "product_senior_manager": "125",
+      "system_engineer": "85",
+      "project_manager": "70"
     },
     {
       "name": "Akamai",
@@ -897,10 +897,10 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "30%",
       "interview_experience": "62",
-      "s_soft_engineer": "103",
-      "s_soft_senior_engineer": "127",
-      "s_product_manager": "132",
-      "s_product_senior_manager": "159"
+      "soft_engineer": "103",
+      "soft_senior_engineer": "127",
+      "product_manager": "132",
+      "product_senior_manager": "159"
     },
     {
       "name": "CA",
@@ -928,11 +928,11 @@ beta_companies = [
       "entry_major": "Computer & Information Sciences;Computer Science;Business Management",
       "entry_degree": "22%",
       "interview_experience": "67",
-      "s_soft_engineer": "86",
-      "s_soft_senior_engineer": "110",
-      "s_product_manager": "101",
-      "s_product_senior_manager": "139",
-      "s_project_manager": "95"
+      "soft_engineer": "86",
+      "soft_senior_engineer": "110",
+      "product_manager": "101",
+      "product_senior_manager": "139",
+      "project_manager": "95"
     },
     {
       "name": "Trulia",
@@ -960,9 +960,9 @@ beta_companies = [
       "entry_major": "Computer Science;Business Management;Business Administration",
       "entry_degree": "21%",
       "interview_experience": "46",
-      "s_soft_engineer": "124",
-      "s_soft_senior_engineer": "141",
-      "s_product_manager": "121",
-      "s_product_senior_manager": "124"
+      "soft_engineer": "124",
+      "soft_senior_engineer": "141",
+      "product_manager": "121",
+      "product_senior_manager": "124"
     }
   ]

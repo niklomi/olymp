@@ -2,7 +2,7 @@ Template.update_company.onCreated(function(){
     let self = this;
     self.autorun(function(){
         let id = Session.get('update');
-        self.subscribe('single', id);
+        self.subscribe('companies', id);
     });
 });
 

@@ -19,7 +19,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 natestrauser:animate-css
 twbs:bootstrap
 ongoworks:security
-msavin:mongol
 browser-policy
 momentjs:moment
 matb33:collection-hooks

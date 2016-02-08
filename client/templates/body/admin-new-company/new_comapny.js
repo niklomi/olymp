@@ -1,7 +1,7 @@
 Template.new_company.onCreated(function(){
     let self = this;
     self.autorun(function(){
-        self.subscribe('all');
+        self.subscribe('companies', Companies.findOne()._id);
     });
 });
 

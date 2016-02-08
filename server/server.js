@@ -1,9 +1,9 @@
 Meteor.startup(function(){
     SyncedCron.start();
-    update_all_rating();
-    sitemap();
     Companies.remove({});
     if (Companies.find().count() === 0) insert_beta_companies();
+    update_all_rating();
+    sitemap();
 });
 
 Meteor.methods({

@@ -31,24 +31,5 @@ Template.company.events({
     'click .td-tweet , click .tr-company': function(e,t){
         e.stopPropagation;
         t.show_full_info.set(! t.show_full_info.get());
-    },
-    'click .admin_edit': function(event,template){
-        let id = this._id;
-        Session.set('update', id);
-        FlowRouter.go("/calabria/update");
-    },
-    'click .edit': function(){
-        let id = this._id,
-        data = {
-            template: "user_edit",
-            id: id
-        }
-        Session.set('overlay', data);
-    },
-    'click #faq-grades':function(event){
-        let data = {
-            template: "grade_FAQ"
-        }
-        Session.set('overlay', data);
     }
 })

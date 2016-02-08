@@ -1,0 +1,41 @@
+<template name="company_reviews">
+    <div class=" capsula-1">
+        {{#each reviews}}
+        <div class="review">
+            <h3 class="bold">{{title}}</h3>
+            <h4 class="text-grey">
+                {{author}}
+            </h4>
+            <h4 class="h4"><span class="bold">Rating: </span><div class="grade grade_{{grade_color rating}}">{{grade rating}}</div></h4>
+            {{#if text}}
+            <p class="review-text">
+                <h4 class="h4">Experience</h4>
+                <span class="text">{{text}}</span>
+            </p>
+            {{/if}}
+            {{#if pros}}
+            <p class="review-text">
+                <h4 class="h4">Pros <div class="grade grade_aa">+</div></h4>
+                <span class="text">{{pros}}</span>
+            </p>
+            {{/if}}
+            {{#if cons}}
+            <p class="review-text">
+                <h4 class="h4">Cons <div class="grade grade_cc">—</div></h4>
+                <span class="text">{{cons}}</span>
+            </p>
+            {{/if}}
+            {{#if advice}}
+            <p class="review-text">
+                <h4 class="h4">Advice to company</h4>
+                <span class="text">{{advice}}</span>
+            </p>
+            {{/if}}
+        </div>
+        {{else}}
+            <div class="no-item">
+                Soon they'll be here
+            </div>
+        {{/each}}
+    </div>
+</template>
