@@ -3,7 +3,7 @@ Companies.before.update(function (userId, doc, fieldNames, modifier, options) {
 
     if (fieldNames.length === 1 && fieldNames[0] === 'rating'){
         set.rating = rating(doc);
-    }else {
+    }else if (set.rating){
         set.average_salary = set['salaries.soft_engineer'];
         set.rating = rating(set);
     }
@@ -26,6 +26,12 @@ update_all_rating = function(make_null = false){
         }
 
         Companies.update(data._id, {$set : {rating: 0}});
+    });
+}
+
+update_all_company= function(){
+    _.each(Companies.find().fetch(), function(sss){
+        if (!sss.name_low) Companies.update(sss._id, {$set : {name :sss.name}})
     });
 }
 

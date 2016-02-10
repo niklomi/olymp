@@ -6,7 +6,7 @@
             </div>
         </td>
         <td>
-            <div class="company-image" style="background-image: url('/images/{{image}}');">
+            <div class="company-image" style="background-image: url('/images/c/{{image}}');">
 
             </div>
         </td>
@@ -30,6 +30,9 @@
                 {{average_salary}}
             </p>
         </td>
+        <td class="hide-900">
+            <div class="grade grade_{{grade_color culture}}">{{grade culture}}</div>
+        </td>
         <td class="hide-390">
             <div class="grade grade_{{grade_color people_rating}}">{{grade people_rating}}</div>
         </td>
@@ -39,11 +42,7 @@
         <td class="hide-540">
             <div class="capsula grade_{{interview_experience_color interview_experience}}">{{grade_interview_experience interview_experience}}</div>
         </td>
-        <td class="hide-900">
-            {{#with twitt_it}}
-                <a class="capsula button--tweet--reverse td-tweet" href="https://twitter.com/intent/tweet?text={{text}}&url={{url}}&hashtags={{hashtags}}"><i class="fa fa-twitter"></i></a>
-            {{/with}}
-        </td>
+
     </tr>
     {{#if show_full_info}}
     <tr class="full-info">

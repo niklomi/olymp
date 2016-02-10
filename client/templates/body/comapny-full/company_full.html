@@ -1,6 +1,6 @@
 <template name="company_full">
 <div class="big-company-image-wrap relative">
-    <div class="big-company-image" style="background-image: url('/images/{{big_image}}')"></div>
+    <div class="big-company-image" style="background-image: url('/images/c/{{big_image}}')"></div>
     <a href="{{link}}" target="_blank" class="url"><i class="fa fa-link"></i></a>
 </div>
 {{#if sub_ready}}
@@ -10,12 +10,19 @@
 </div>
 
 <div class="menu capsula-1">
-    <p class="menu-switch {{#if active 'company_info'}}active{{/if}}" id="company_info">
-        Info
-    </p>
-    <p class="menu-switch {{#if active 'company_reviews'}}active{{/if}}" id="company_reviews">
-        Reviews
-    </p>
+    {{#if single}}
+        <a class="no-border" href="{{pathFor '/c/:name/info' name=name_low}}"><p class="menu-switch {{#if active 'info'}}active{{/if}}" id="info">
+            Info
+        </p></a>
+        <a class="no-border" href="{{pathFor '/c/:name/reviews' name=name_low}}"><p class="menu-switch {{#if active 'reviews'}}active{{/if}}" id="reviews">Reviews</p></a>
+        <a class="no-border" href="{{pathFor '/c/:name/interviews' name=name_low}}"><p class="menu-switch {{#if active 'interviews'}}active{{/if}}" id="interviews">Interviews<span class="taglabel">new</span></p></a>
+    {{else}}
+        <p class="menu-switch {{#if active 'info'}}active{{/if}}" id="info">
+            Info
+        </p>
+        <p class="menu-switch {{#if active 'reviews'}}active{{/if}}" id="reviews">Reviews</p>
+        <p class="menu-switch {{#if active 'interviews'}}active{{/if}}" id="interviews">Interviews<span class="taglabel">new</span></p>
+    {{/if}}
 </div>
 
 {{> Template.dynamic template=template}}

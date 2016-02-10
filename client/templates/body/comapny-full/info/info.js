@@ -10,8 +10,8 @@ Template.company_info.helpers({
         return this.join('<br>');
     },
     twitt_it: function(){
-        let text = encodeURI(`$${this.salaries.soft_engineer},000 - Average salary of Sofware Engineer in ${this.name}`),
-        url = encodeURI("http://techfights.com"),
+        let text = encodeURI(`$${this.salaries.soft_engineer},000 - Average salary of Sofware Engineer in ${this.name_low}`),
+        url = encodeURI(`http://techfights.com/c/${this.name_low}/info`),
         hashtags = encodeURI(this.name.toLowerCase()),
         data = {text,url,hashtags};
 

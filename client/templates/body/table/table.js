@@ -1,26 +1,41 @@
 Template.table.onCreated(function(){
-    let self = this;
+    console.log();
+    let self = this,
+    handle = false;
+
     self.ready = new ReactiveVar();
     self.active = new ReactiveVar();
+
     self.autorun(function(){
-        let handle = _tableSub.subscribe('companies');
+        FlowRouter.watchPathChange();
+        if (Session.get('seo')){
+            handle = _tableSub.subscribe('companies', undefined, FlowRouter.getParam('name'));
+        }else {
+            handle = _tableSub.subscribe('companies');
+        }
         self.ready.set(handle.ready());
     });
 });
 
 Template.table.helpers({
     companies: function(){
-        let sorting = Session.get('sort') || {};
+        let sorting = {sort : {rating: -1, name: 1, average_salary: -1, people_rating: -1}};
         if (Session.get('sort')){
             sorting = { 'sort' : Session.get('sort')};
         }
-        return Companies.find({}, sorting);
+        if (Session.get('seo'))
+            return Companies.find({name_low : FlowRouter.getParam('name')}, sorting);
+        else
+            return Companies.find({}, sorting);
     },
     ready: function(){
         return Template.instance().ready.get();
     },
     active: function(data){
         return Template.instance().active.get() === data ? true : false;
+    },
+    single: function(){
+        return Session.get('seo');
     }
 });
 

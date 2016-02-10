@@ -18,6 +18,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 natestrauser:animate-css
 twbs:bootstrap
+arillo:flow-router-helpers
 ongoworks:security
 browser-policy
 momentjs:moment

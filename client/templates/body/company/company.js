@@ -1,6 +1,11 @@
 Template.company.onCreated(function(){
     let self = this;
     self.show_full_info = new ReactiveVar(false);
+    self.autorun(function(){
+        if (Session.get('seo')){
+            self.show_full_info.set(true);
+        }
+    });
 });
 
 Template.company.onRendered(function(){
@@ -16,14 +21,6 @@ Template.company.helpers({
     },
     workers_count: function(){
         return `${this.workers_count}K`;
-    },
-    twitt_it: function(){
-        let text = encodeURI(`$${this.average_salary},000 - Average salary of Sofware Engineer in ${this.name}`),
-        url = encodeURI("http://techfights.com"),
-        hashtags = encodeURI(this.name.toLowerCase()),
-        data = {text,url,hashtags};
-
-        return data;
     }
 });
 

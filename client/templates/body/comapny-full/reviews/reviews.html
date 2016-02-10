@@ -1,12 +1,12 @@
 <template name="company_reviews">
-    <div class=" capsula-1">
+    <div class="capsula-1">
         {{#each reviews}}
         <div class="review">
             <h3 class="bold">{{title}}</h3>
             <h4 class="text-grey">
                 {{author}}
             </h4>
-            <h4 class="h4"><span class="bold">Rating: </span><div class="grade grade_{{grade_color rating}}">{{grade rating}}</div></h4>
+            <h4 class="h4"><span class="bold">Rating: </span><div class="grade grade_{{rating_color rating}}">{{rating}}</div></h4>
             {{#if text}}
             <p class="review-text">
                 <h4 class="h4">Experience</h4>
@@ -15,20 +15,38 @@
             {{/if}}
             {{#if pros}}
             <p class="review-text">
-                <h4 class="h4">Pros(+)</h4>
-                <span class="text">{{pros}}</span>
+                <h4 class="h4">Pros</h4>
+                {{#if big 'pros'}}
+                    <span class="text show_more pointer" id="pros">{{pros}}{{#if hide 'pros'}}....
+                        <u>(show more)</u>{{/if}}
+                    </span>
+                {{else}}
+                    <span class="text">{{pros}}</span>
+                {{/if}}
             </p>
             {{/if}}
             {{#if cons}}
             <p class="review-text">
-                <h4 class="h4">Cons(—)</h4>
-                <span class="text">{{cons}}</span>
+                <h4 class="h4">Cons</h4>
+                {{#if big 'cons'}}
+                    <span class="text show_more pointer" id="cons">{{cons}}{{#if hide 'cons'}}....
+                        <u>(show more)</u>{{/if}}
+                    </span>
+                {{else}}
+                    <span class="text">{{cons}}</span>
+                {{/if}}
             </p>
             {{/if}}
             {{#if advice}}
             <p class="review-text">
                 <h4 class="h4">Advice to company</h4>
-                <span class="text">{{advice}}</span>
+                {{#if big 'advice'}}
+                    <span class="text show_more pointer" id="advice">{{advice}}{{#if hide 'advice'}}....
+                        <u>(show more)</u>{{/if}}
+                    </span>
+                {{else}}
+                    <span class="text">{{advice}}</span>
+                {{/if}}
             </p>
             {{/if}}
         </div>

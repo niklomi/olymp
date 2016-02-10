@@ -7,17 +7,15 @@
                 <th class="align-left hide-900 {{#if active "headquarters"}}active-th{{/if}}" id="srt_headquarters" title="Sort by companies headquarters">Headquarters</th>
                 <th class="hide-630 {{#if active "workers_count"}}active-th{{/if}}" id="srt_workers_count" title="Sort by employees count">Employees</th>
                 <th class="align-right {{#if active "average_salary"}}active-th{{/if}}" id="srt_average_salary" title="Sort by average salary">Avg. Salary</th>
+                <th class="hide-900 {{#if active "culture"}}active-th{{/if}}" id="srt_culture" title="Sort by culture in company">Culture<p class="little-boy">culture & values</p>
+                </th>
                 <th class="hide-390 {{#if active "people_rating"}}active-th{{/if}}" id="srt_people_rating" title="Sort by employees rating">People Rating<p class="little-boy">employees rank</p></th>
                 <th class="hide-460 {{#if active "work_life_balance"}}active-th{{/if}}" id="srt_work_life_balance" title="Sort by work/life balance">Work/Life<p class="little-boy">W/L balance</p></th>
                 <th class="hide-540 {{#if active "interview_experience"}}active-th{{/if}}" id="srt_interview_experience" title="Sort by interview experience">Interview<p class="little-boy">interview experience</p></th>
-                <th class="hide-900">
-                    <i class="fa fa-twitter"></i>
-                    <p class="little-boy">tweet it</p>
-                </th>
             </tr>
-                {{#each companies}}
-                    {{> company}}
-                {{/each}}
+            {{#each companies}}
+                {{> company}}
+            {{/each}}
         </table>
         {{#unless ready}}
             {{> loading}}

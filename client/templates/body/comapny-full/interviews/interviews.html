@@ -1,0 +1,40 @@
+<template name="company_interviews">
+    <div class="capsula-1">
+        {{#each interviews}}
+        <div class="review">
+            <h3 class="bold">{{title}}</h3>
+            <h4 class="text-grey">
+                {{author}}
+            </h4>
+            {{#if application}}
+            <p class="review-text">
+                <h4 class="h4">Application</h4>
+                {{#if big 'application'}}
+                    <span class="text show_more pointer" id="application">{{application}}{{#if hide 'application'}}....
+                        <u>(show more)</u>{{/if}}
+                    </span>
+                {{else}}
+                    <span class="text">{{application}}</span>
+                {{/if}}
+            </p>
+            {{/if}}
+            {{#if interview}}
+            <p class="review-text">
+                <h4 class="h4">Interview</h4>
+                {{#if big 'interview'}}
+                    <span class="text show_more pointer" id="interview">{{interview}}{{#if hide 'interview'}}....
+                        <u>(show more)</u>{{/if}}
+                    </span>
+                {{else}}
+                    <span class="text">{{interview}}</span>
+                {{/if}}
+            </p>
+            {{/if}}
+        </div>
+        {{else}}
+            <div class="no-item">
+                Soon they'll be here
+            </div>
+        {{/each}}
+    </div>
+</template>

@@ -5,24 +5,26 @@
         <div class="text">
             <a class="no-border" href="/"><div class="logo"></div></a>
             <h1>
-                What it's like to work in the <br />
+                <span>What it's like to work in the</span> <br />
                 best IT companies in the world?
             </h1>
-            <h2>
-                Join our community on <i class="fa fa-slack"></i> Slack
-            </h2>
-            <div class="give-me-invite-slack">
-                {{#unless invite}}
-                	<form id="slack-form">
-                		<input type="email" placeholder="you@yourdomain.com" />
-                		<button type="submit" class="button button-action button-main">Get My Invite</button>
-                	</form>
-                	{{#if error}}
-                		<div class="message error">{{error}}</div>
-                	{{/if}}
-                {{else}}
-                	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong></div>
-                {{/unless}}
+            <div class="slack-wrap">
+                <h2>
+                    Join Community on <i class="fa fa-slack"></i> Slack
+                </h2>
+                <div class="give-me-invite-slack">
+                    {{#unless invite}}
+                    	<form id="slack-form">
+                    		<input type="email" placeholder="you@yourdomain.com" />
+                    		<button type="submit" class="button button-action button-main">Get My Invite</button>
+                    	</form>
+                    	{{#if error}}
+                    		<div class="message error">{{error}}</div>
+                    	{{/if}}
+                    {{else}}
+                    	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong></div>
+                    {{/unless}}
+                </div>
             </div>
         </div>
     </div>
@@ -30,7 +32,7 @@
 <div class="about-wrap container-x slack-about">
     <h2><i class="fa fa-slack"></i> Slack Chat</h2>
     <p>
-        We want to make a community where people can share their work experience and be able to find new useful contacts in tech world.
+        We make a community where people can share their work experience and be able to find new useful contacts in tech world.
     </p>
     <div class="slack-chat">
 

@@ -2,6 +2,12 @@ Template.layout.onCreated(function(){
 	Session.setDefault('overlay', false);
 	Session.setDefault('sortorder', 1);
 	Session.setDefault('sort', false);
+	Session.setDefault('seo', false);
+
+	this.autorun(function(){
+        FlowRouter.watchPathChange();
+        checkSEO();
+    });
 });
 
 Template.layout.onRendered(function(){
