@@ -23,10 +23,17 @@ Template.table.helpers({
         if (Session.get('sort')){
             sorting = { 'sort' : Session.get('sort')};
         }
-        if (Session.get('seo'))
-            return Companies.find({name_low : FlowRouter.getParam('name')}, sorting);
-        else
-            return Companies.find({}, sorting);
+        if (Session.get('seo')){
+            // 1 компания
+            let companies = Companies.find({name_low : FlowRouter.getParam('name')}, sorting).fetch();
+            return companies;
+        }
+        else{
+            let companies = Companies.find({}, sorting).fetch();
+            if (companies.length > 10)
+                companies.splice(10, 0, _piar);
+            return companies;
+        }
     },
     ready: function(){
         return Template.instance().ready.get();
