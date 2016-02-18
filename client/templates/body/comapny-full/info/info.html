@@ -34,7 +34,7 @@
                     Employees
                 </td>
                 <td>
-                    {{workers_count}},000+
+                    {{workersCount workers_count}}
                 </td>
             </tr>
             {{/if}}
@@ -42,10 +42,10 @@
             <tr>
                 <td>
                     Revenue
-                    <p class="little-boy">in 2015</p>
+                    <p class="little-boy">per year</p>
                 </td>
                 <td>
-                    {{revenue}}+ Billions
+                    {{revenue}}
                 </td>
             </tr>
             {{/if}}
@@ -179,7 +179,7 @@
 
     <div class="tweet-it">
         <p>
-            ${{average_salary}},000 - Average salary of Sofware Engineer in {{name}}
+            {{makeSalary average_salary}} - Average salary of Sofware Engineer in {{name}}
         </p>
         {{#with twitt_it}}
             <a class="button button--tweet width-100-sm" href="https://twitter.com/intent/tweet?text={{text}}&url={{url}}&hashtags={{hashtags}}"><i class="fa fa-twitter"></i> Tweet</a>
@@ -204,7 +204,7 @@
                     Software Engineer
                 </td>
                 <td>
-                    $ {{salaries.soft_engineer}},000
+                    {{makeSalary salaries.soft_engineer}}
                 </td>
             </tr>
             {{/if}}
@@ -214,7 +214,7 @@
                     Software Senior Engineer
                 </td>
                 <td>
-                    $ {{salaries.soft_senior_engineer}},000
+                      {{makeSalary salaries.soft_senior_engineer}}
                 </td>
             </tr>
             {{/if}}
@@ -224,7 +224,7 @@
                     Product Manager
                 </td>
                 <td>
-                    $ {{salaries.product_manager}},000
+                      {{makeSalary salaries.product_manager}}
                 </td>
             </tr>
             {{/if}}
@@ -234,7 +234,7 @@
                     Product Senior Manager
                 </td>
                 <td>
-                    $ {{salaries.product_senior_manager}},000
+                      {{makeSalary salaries.product_senior_manager}}
                 </td>
             </tr>
             {{/if}}
@@ -244,7 +244,7 @@
                     System Engineer
                 </td>
                 <td>
-                    $ {{salaries.system_engineer}},000
+                      {{makeSalary salaries.system_engineer}}
                 </td>
             </tr>
             {{/if}}
@@ -254,7 +254,7 @@
                     Project Manager
                 </td>
                 <td>
-                    $ {{salaries.project_manager}},000
+                      {{makeSalary salaries.project_manager}}
                 </td>
             </tr>
             {{/if}}
@@ -318,7 +318,7 @@
             {{#if entry_major}}
             <tr>
                 <td>
-                    <i class="fa fa-graduation-cap"></i> Entry Major 
+                    <i class="fa fa-graduation-cap"></i> Entry Major
                 </td>
                 <td>
                     {{#with entry_major}}

@@ -1,11 +1,12 @@
 Companies.before.update(function (userId, doc, fieldNames, modifier, options) {
     let set = modifier["$set"];
-
     if (fieldNames.length === 1 && fieldNames[0] === 'rating'){
         set.rating = rating(doc);
-    }else if (set.rating){
+    } else if (set.rating){
         set.average_salary = set['salaries.soft_engineer'];
         set.rating = rating(set);
+    } else if (set['salaries.soft_engineer']){
+        set.average_salary = set['salaries.soft_engineer'];
     }
 
     modifier["$set"] = set;
@@ -30,9 +31,39 @@ update_all_rating = function(make_null = false){
 }
 
 update_all_company= function(){
-    _.each(Companies.find().fetch(), function(sss){
-        if (!sss.name_low) Companies.update(sss._id, {$set : {name :sss.name}})
-    });
+    // _.each(Companies.find().fetch(), function(sss){
+    //     if (!sss.name_low) Companies.update(sss._id, {$set : {name :sss.name}})
+    // });
+    if (Companies.findOne().revenue <= 1000){
+        _.each(Companies.find().fetch(), function(company){
+            Companies.update(company._id, {$set : {revenue : company.revenue * 1000}})
+        });
+    }
+
+    if (Companies.findOne().workers_count <= 1000){
+        _.each(Companies.find().fetch(), function(company){
+            Companies.update(company._id, {$set : {workers_count : company.workers_count * 1000}})
+        });
+    }
+
+    if (Companies.findOne().average_salary <= 1000){
+        _.each(Companies.find().fetch(), function(company){
+            for (var key in company.salaries){
+                if (key === 'soft_engineer')
+                    Companies.update(company._id, { $set : {'salaries.soft_engineer' : company.salaries[key] * 1000}})
+                if (key === 'soft_senior_engineer')
+                    Companies.update(company._id, { $set : {'salaries.soft_senior_engineer' : company.salaries[key] * 1000}})
+                if (key === 'product_manager')
+                    Companies.update(company._id, { $set : {'salaries.product_manager' : company.salaries[key] * 1000}})
+                if (key === 'product_senior_manager')
+                    Companies.update(company._id, { $set : {'salaries.product_senior_manager' : company.salaries[key] * 1000}})
+                if (key === 'system_engineer')
+                    Companies.update(company._id, { $set : {'salaries.system_engineer' : company.salaries[key] * 1000}})
+                if (key === 'project_manager')
+                    Companies.update(company._id, { $set : {'salaries.project_manager' : company.salaries[key] * 1000}})
+            }
+        });
+    }
 }
 
 Meteor.methods({

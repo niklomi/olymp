@@ -15,13 +15,7 @@ Template.company.onRendered(function(){
 })
 
 Template.company.helpers({
-    show_full_info: () => Template.instance().show_full_info.get(),
-    average_salary: function(){
-        return `$ ${this.average_salary},000`
-    },
-    workers_count: function(){
-        return `${this.workers_count}K`;
-    }
+    show_full_info: () => Template.instance().show_full_info.get()
 });
 
 Template.company.events({
