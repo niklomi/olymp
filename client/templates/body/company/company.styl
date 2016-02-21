@@ -16,7 +16,7 @@
     font-weight: 400
 
 .active-tr
-    background: $color-light-grey;
+    background: $text-light-grey-color;
     td
         p
             color: $text-main-color
@@ -26,7 +26,7 @@
 
 .tr-company
     &:hover
-        background: $color-light-grey;
+        background: $text-light-grey-color;
         td
             p
                 color: $text-main-color
@@ -34,12 +34,13 @@
             p
                 border-bottom: 2px solid
     td
-        padding: 1.5rem 0.5rem
+        padding: 1rem 0.5rem
         .company-image
             width: 3rem;
             height: 3rem;
             background-size: cover;
             display: inline-block;
+            border-radius: 4px
         p
             display: inline-block
     .company-name
@@ -66,7 +67,7 @@
                 @media(max-width:768px)
                     width:100%
         .big-company-image-wrap
-            background: $text-main-color
+            background: $text-grey-color
             @media(max-width:768px)
                 .url
                     border-color: #fff !important
@@ -84,7 +85,7 @@
                 width: 6rem;
                 height: 6rem;
                 margin: -3rem 0 0 -3rem;
-                border: 2px solid $color-light-grey;
+                border: 2px solid $text-light-grey-color;
                 border-radius: 50%;
                 overflow: hidden;
                 opacity: 1;
@@ -97,7 +98,7 @@
                     text-align: center;
                     font-size: 4rem;
                     line-height: 6rem;
-                    color: $color-light-grey;
+                    color: $text-light-grey-color;
                     position:relative
                     right:1px
                     -webkit-transition: all .25s ease-out;

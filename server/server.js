@@ -15,5 +15,12 @@ Meteor.methods({
             text: text,
             channel: "olymp_user_edit"
         });
+    },
+    emailSubscribe(email){
+        check(email, String);
+        if (__checkEmail(email)){
+            if(Emails.findOne({email : email})) throw new Meteor.Error("emailSubscribe", "You already subscribed");
+            Emails.insert({email: email});
+        }else throw new Meteor.Error("emailSubscribe", "Wrong email!");
     }
 })

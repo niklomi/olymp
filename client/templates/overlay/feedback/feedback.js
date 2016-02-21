@@ -1,4 +1,4 @@
-Template.show_feedback.events({
+Template.showFeedback.events({
     'click #feedback': function(event){
         let data = {
             template: "feedback"

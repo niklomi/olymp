@@ -12,7 +12,7 @@
                     <span class="link" id="grades">Grade Table </span>- Learn more about grade system A+, A, B+, B
                 </li>
                 <li>
-                    {{> show_feedback}} - You have some ideas on how to improve the project? Great! Share them with us.
+                    {{> showFeedback}} - You have some ideas on how to improve the project? Great! Share them with us.
                 </li>
                 <li>
                     <span class="link" id="add_new_company">Add Company</span> - If you want to add a new company which is not present in our list
@@ -20,11 +20,14 @@
                 <li>
                     <a href="/slack"><i class="fa fa-slack"></i> Slack</a> - Join our community and learn more about working in tech companies.
                 </li>
+                <li>
+                    <a href="https://twitter.com/intent/follow?screen_name=tech_fights"><i class="fa fa-twitter"></i> Twitter</a> - Every time when we add new company you will get a message
+                </li>
             </ul>
             </p>
             <h2 id="contact"><i class="fa fa-envelope-o"></i> Contact</h2>
             <p>
-                For business inquiries and for great ideas you can write me on <span class="red-color">{{my_email}}</span>. If you want to talk about this project or to ask me some questions, just write me on twitter <a href="https://twitter.com/{{my_twitter}}">@{{my_twitter}}</a>. For your suggestions about improving ranking system, companies data and other stuff, we have {{> show_feedback}}.
+                For business inquiries and for great ideas you can write me on <span class="red-color">{{my_email}}</span>. If you want to talk about this project or to ask me some questions, just write me on twitter <a href="https://twitter.com/{{my_twitter}}">@{{my_twitter}}</a>. For your suggestions about improving ranking system, companies data and other stuff, we have {{> showFeedback}}.
             </p>
             <h2 class="text-center text-grey">FAQ</h2>
             <h2>What is {{my_project}}?</h2>
@@ -40,11 +43,11 @@
             </p>
             <h2>How the project was created?</h2>
             <p>
-                This project would not exist without the super <a href="https://nomadlist.com">Nomad List</a>. I liked their way of a rating system, for me it was something new and creative and I decided to make their concept for technology companies.
+                This project would not exist without the super <a href="https://nomadlist.com" rel='nofollow' >Nomad List</a>. I liked their way of a rating system, for me it was something new and creative and I decided to make their concept for technology companies.
             </p>
             <h2 id="newcompany">How to add new company?</h2>
             <p>
-                Currently most of the data is dependent on the opinions of employees and if you can provide all the necessary data (like every company has in list), or show me where I can take it, then <a href="/about#contact">contact</a>  me.
+                Currently most of the data is dependent on the opinions of employees. If your company can be found on <a href='https://www.glassdoor.com' target='_blank' rel='nofollow' >glassdoor.com</a> or you can provide all the necessary data (like every company has in list) then <a href='/about#contact'>contact</a>  me.
             </p>
             <h2>How to edit wrong data?</h2>
             <p>

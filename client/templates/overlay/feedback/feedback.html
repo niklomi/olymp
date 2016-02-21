@@ -2,13 +2,10 @@
     <div class="feedback-wrap">
         <h2>Feedback</h2>
         <p class="align-left">
-            Cool that you decided to leave your feedback. I hope together with you we will be able to improve the rating of popular technology companies and help people to find a great job.
+            Finally you're here! Share with us what you want. Suggest a company, report a bug, say "Hello".
         </p>
         <p class="align-left">
-            Also, you can help improve the ranking of your favorite company :)
-        </p>
-        <p class="align-left">
-            Dear TechFights,
+            Have a crazy idea? I'm listening!
         </p>
         <form id="form_feedback">
             <textarea rows="5" name="textarea" id="form_feedback_textarea" placeholder="I want to share.." autofocus></textarea>
@@ -23,6 +20,6 @@
     </div>
 </template>
 
-<template name="show_feedback">
-    <span id="feedback" class="link">Feedback</span>
+<template name="showFeedback">
+    <span id="feedback" class="{{#if dontBeLink}}pointer{{else}}link{{/if}}">{{#if text}}{{text}}{{else}}Feedback{{/if}}</span>
 </template>

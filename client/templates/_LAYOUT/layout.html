@@ -9,13 +9,8 @@
     {{#if show_overlay}}
         {{> overlay}}
     {{/if}}
-    
-    <div id="follow_twitter">
-        <a class="twitter-follow-button"
-        href="https://twitter.com/tech_fights" data-size="large" data-show-count="false">
-        Follow @tech_fights</a>
-    </div>
 
+    {{> fixedFooter}}
     <script>window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -33,4 +28,5 @@
     return t;
     }(document, "script", "twitter-wjs"));</script>
 
+    <div id="fixedFooterSpace"></div>
 </template>

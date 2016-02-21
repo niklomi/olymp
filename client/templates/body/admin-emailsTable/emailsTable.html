@@ -1,0 +1,15 @@
+<template name="emailsTable">
+<div class="emailsTable>">
+  <table class="table">
+    <h3> Emails count = {{emailsCount}} </h3>
+    <tr>
+      <th>Email</th>
+    </tr>
+    {{#each emails}}
+      <tr>
+        <td>{{email}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+</template>

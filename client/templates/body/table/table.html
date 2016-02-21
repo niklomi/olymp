@@ -6,7 +6,7 @@
                 <th class="align-left th-company {{#if active "name"}}active-th{{/if}}" colspan="2" id="srt_name"  title="Sort by companies names">Company</th>
                 <th class="align-left hide-900 {{#if active "headquarters"}}active-th{{/if}}" id="srt_headquarters" title="Sort by companies headquarters">Headquarters</th>
                 <th class="hide-630 {{#if active "workers_count"}}active-th{{/if}}" id="srt_workers_count" title="Sort by employees count">Employees</th>
-                <th class="align-right {{#if active "average_salary"}}active-th{{/if}}" id="srt_average_salary" title="Sort by average salary">Avg. Salary</th>
+                <th class="align-right {{#if active "average_salary"}}active-th{{/if}}" id="srt_average_salary" title="Sort by average salary">Salary/year</th>
                 <th class="hide-900 {{#if active "culture"}}active-th{{/if}}" id="srt_culture" title="Sort by culture in company">Culture<p class="little-boy">culture & values</p>
                 </th>
                 <th class="hide-390 {{#if active "people_rating"}}active-th{{/if}}" id="srt_people_rating" title="Sort by employees rating">People Rating<p class="little-boy">employees rank</p></th>
@@ -16,23 +16,24 @@
             {{#each companies}}
                 {{> company}}
             {{/each}}
+            {{#unless ready}}
+                {{> tableFakeLoading}}
+            {{/unless}}
         </table>
-        {{#unless ready}}
-            {{> loading}}
-        {{else}}
+        {{#if ready}}
         <div id="footer">
             <div class="text-center">
                 <div class="new-company-wrap">
-                    <div class="button width-100-sm" id="add_new_company">Add company</div>
+                    <div class="button width-100-sm" id="add_new_company"><i class="fa fa-plus"></i> Add Company</div>
                 </div>
                 <p class="text-grey">
-                    For all your suggestions we have {{> show_feedback}}
+                    For all your suggestions we have {{> showFeedback}}
                 </p>
                 <p class="text-grey">
-                    TechFights — <a href="/about">ABOUT</a> — <a href="/about#contact">Contact</a>
+                    TechFights — <a href="/about">About</a> — <a href="/about#contact">Contact</a> — <a href="https://twitter.com/intent/follow?screen_name=tech_fights"><i class="fa fa-twitter"></i> Twitter</a>
                 </p>
             </div>
         </div>
-        {{/unless}}
+        {{/if}}
     </div>
 </template>

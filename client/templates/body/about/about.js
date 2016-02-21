@@ -3,7 +3,9 @@ var _ids = ["contact", "newcompany"];
 Template.about.onRendered(function(){
     _.each(_ids, function(data){
         if (FlowRouter.current().context.pathname.indexOf(data) > 0)
-    		document.getElementById(data).scrollIntoView();
+            document.getElementById(data).scrollIntoView();
+        else
+            $('body').scrollTop(0);
     })
 });
 

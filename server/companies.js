@@ -12,6 +12,10 @@ Companies.before.update(function (userId, doc, fieldNames, modifier, options) {
     modifier["$set"] = set;
 });
 
+Companies.after.insert(function (userId, doc) {
+  tweetNewCompany(doc);
+});
+
 Companies.before.insert(function (userId, doc) {
     doc.average_salary = doc.salaries.soft_engineer;
     doc.rating = rating(doc);

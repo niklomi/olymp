@@ -1,14 +1,19 @@
 String.prototype.capitalize = function() {
-	return this.charAt(0).toUpperCase() + this.slice(1);
+    return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
 random = function(min = 1, max = 100){
     return Math.round(Math.random() * (max - min) + min);
 }
 
+__checkEmail = function(email){
+    let re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    return re.test(email);
+}
+
 letter_grade = function(data){
-	let grade;
-	if (data >= 95) {
+    let grade;
+    if (data >= 95) {
         grade = "A+";
     }
     else if (85 <= data && data <= 94) {
@@ -29,12 +34,12 @@ letter_grade = function(data){
     else {
         grade = "F";
     }
-	return grade;
+    return grade;
 }
 
 letter_grade_color = function(data){
-	let grade;
-	if (data >= 85) {
+    let grade;
+    if (data >= 85) {
         grade = "aa";
     }
     else if (data >= 70) {
@@ -46,12 +51,12 @@ letter_grade_color = function(data){
     else {
         grade = "ff";
     }
-	return grade;
+    return grade;
 }
 
 interview_difficulty_color = function(data){
-	let grade;
-	if (data >= 90) {
+    let grade;
+    if (data >= 90) {
         grade = "ff";
     }
     else if (65 <= data && data <= 89) {
@@ -63,12 +68,12 @@ interview_difficulty_color = function(data){
     else {
         grade = "aa";
     }
-	return grade;
+    return grade;
 }
 
 grade_interview_difficulty = function(data){
     let grade;
-	if (data >= 90) {
+    if (data >= 90) {
         grade = "very hard";
     }
     else if (65 <= data && data <= 89) {
@@ -80,7 +85,7 @@ grade_interview_difficulty = function(data){
     else {
         grade = "easy";
     }
-	return grade;
+    return grade;
 }
 
 grade_interview_experience = function(data){

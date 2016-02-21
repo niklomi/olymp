@@ -1,0 +1,14 @@
+<template name="poloskaSubscribe">
+    <div class="poloska">
+        <p>
+            Get email when we add new company
+        </p>
+        <form id="subscribeEmail">
+        <input class="width-100-sm" type="text" name="email" id="email" placeholder="Email">
+        <button class="button button--reverse width-100-sm" id="emailSubscribeButton" type="submit"> Subscribe</button>
+        </form>
+        {{#if error}}
+            <h4>{{error}}</h4>
+        {{/if}}
+    </div>
+</template>

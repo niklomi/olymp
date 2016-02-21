@@ -1,5 +1,6 @@
 Companies.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 Slack_c.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
+Emails.permit(['update', 'remove','insert']).ifHasRole('admin').apply();
 
 Meteor.publish('companies', function(id = undefined, name = undefined){
     check(id, Match.OneOf(String, null, undefined));
@@ -25,4 +26,10 @@ Meteor.publish('companies', function(id = undefined, name = undefined){
 Meteor.publish('single.edit', function(id){
     check(id, String);
     return Companies.find(id, {fields: {name: 1}});
+});
+
+Meteor.publish('emails', function(){
+    if (this.userId && Roles.userIsInRole(this.userId, ['admin'])) {
+        return Emails.find();
+    }
 });

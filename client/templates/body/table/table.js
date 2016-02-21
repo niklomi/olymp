@@ -29,9 +29,12 @@ Template.table.helpers({
             return companies;
         }
         else{
-            let companies = Companies.find({}, sorting).fetch();
-            if (companies.length > 10)
-                companies.splice(10, 0, _piar);
+            let companies = Companies.find({}, sorting).fetch(), count = 0;
+            if (companies.length > 20)
+                _.each(_.first(_.shuffle(_piar), 3), function(ad){
+                    companies.splice(10 + count, 0, ad);
+                    count += 11;
+                });
             return companies;
         }
     },
@@ -51,7 +54,7 @@ Template.table.events({
         let data = {
             template: "overlay_text",
             title: "How to add new company?",
-            text: "Currently most of the data is dependent on the opinions of employees and if you can provide all the necessary data (like every company has in list), or show me where I can take it, then <a href='/about#contact'>contact</a>  me."
+            text: "Currently most of the data is dependent on the opinions of employees. If your company can be found on <a href='https://www.glassdoor.com' target='_blank' rel='nofollow' >glassdoor.com</a> or you can provide all the necessary data (like every company has in list) then <a href='/about#contact'>contact</a>  me."
         }
         Session.set('overlay', data);
     },

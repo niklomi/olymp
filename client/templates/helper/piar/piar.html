@@ -1,10 +1,10 @@
 <template name="piar">
     <tr>
-        <td colspan=99 class="piar piar-image">
+        <td colspan=99 class="piar {{backgroundColorClass}} {{textColor}}">
             <p>
-                {{{text}}}
+                {{{text}}} {{#if feedbackText}} <span class="border-text"> {{> showFeedback text=feedbackText dontBeLink=true}} </span> {{/if}}
             </p>
-            <a href="{{buttonLink}}" target="_blank" class="button button--reverse width-100-sm"><i class="fa fa-map"></i> {{buttonText}}</a>
+            {{#if buttonText}}<a href="{{buttonLink}}" target="_blank" class="button {{#if twitter}}button--tweet{{else}}button--reverse{{/if}} width-100-sm">{{{buttonText}}}</a>{{/if}}
         </td>
     </tr>
 </template>
