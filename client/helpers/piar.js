@@ -1,7 +1,7 @@
 _piar = [
     {
         piar : true,
-        text : `Want to <a href="http://remotewolfy.com" class="a-white"><b>work remotely</b></a> as a designer, developer or engineer?`,
+        text : `Want to <a href="http://remotewolfy.com" class="a-white border-text-1px"><b>work remotely</b></a> as a designer, developer or engineer?`,
         buttonText : `<i class="fa fa-bolt"></i> Find Jobs`,
         buttonLink : `http://remotewolfy.com`,
         textColor : 'white',
@@ -9,7 +9,7 @@ _piar = [
     },
     {
         piar : true,
-        text : `Work in tech industry? Share your work process!`,
+        text : `<a href="/slack" class="bold border-text-1px a-white">Work in tech industry?</a> Share your work process!`,
         buttonText : `<i class="fa fa-comments"></i> Join Chat</a>`,
         buttonLink : `/slack`,
         textColor : 'white',
@@ -24,15 +24,7 @@ _piar = [
     },
     {
         piar : true,
-        text : `How does it feel to work in tech startups?`,
-        buttonText : `<i class="fa fa-comments"></i> Discuss on Slack</a>`,
-        buttonLink : `/slack`,
-        textColor : 'white',
-        backgroundColorClass : 'piar-red'
-    },
-    {
-        piar : true,
-        text : `Get message when we add new companies`,
+        text : `<a href="https://twitter.com/intent/follow?screen_name=tech_fights" class="bold border-text-1px a-white">Get message</a> when we add new companies`,
         buttonText : `<i class="fa fa-twitter"></i> Follow</a>`,
         buttonLink : `https://twitter.com/intent/follow?screen_name=tech_fights`,
         textColor : 'white',

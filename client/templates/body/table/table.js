@@ -5,6 +5,7 @@ Template.table.onCreated(function(){
 
     self.ready = new ReactiveVar();
     self.active = new ReactiveVar();
+    self.piar = new ReactiveVar(_.first(_.shuffle(_piar), 3));
 
     self.autorun(function(){
         FlowRouter.watchPathChange();
@@ -19,7 +20,8 @@ Template.table.onCreated(function(){
 
 Template.table.helpers({
     companies: function(){
-        let sorting = {sort : {rating: -1, name: 1, average_salary: -1, people_rating: -1}};
+        let sorting = {sort : {rating: -1, name: 1, average_salary: -1, people_rating: -1}},
+        piar = Template.instance().piar.get();
         if (Session.get('sort')){
             sorting = { 'sort' : Session.get('sort')};
         }
@@ -31,7 +33,7 @@ Template.table.helpers({
         else{
             let companies = Companies.find({}, sorting).fetch(), count = 0;
             if (companies.length > 20)
-                _.each(_.first(_.shuffle(_piar), 3), function(ad){
+                _.each(piar, function(ad){
                     companies.splice(10 + count, 0, ad);
                     count += 11;
                 });
