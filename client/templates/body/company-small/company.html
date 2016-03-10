@@ -4,8 +4,8 @@
 {{else}}
     <tr class="no-select pointer tr-company {{#if show_full_info}} active-tr {{/if}} animated fadeIn">
         <td>
-            <div class="bold grade grade_{{rating_color rating}}">
-                {{rating}}
+            <div class="text-grey">
+                <p class="company-rating">{{rating}}<span class="pts">pts</span></p>
             </div>
         </td>
         <td class="company-image-td">
@@ -43,7 +43,7 @@
             <div class="grade grade_{{grade_color work_life_balance}}">{{grade work_life_balance}}</div>
         </td>
         <td class="hide-540">
-            <div class="capsula grade_{{interview_experience_color interview_experience}}">{{grade_interview_experience interview_experience}}</div>
+            <div class="capsula grade_{{interviewExpGradeColor interview_experience}}">{{interviewExpGrade interview_experience}}</div>
         </td>
 
     </tr>

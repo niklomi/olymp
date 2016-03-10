@@ -1,11 +1,4 @@
-rating = function(data){
-    let salary = data.average_salary,
-    work_life = data.work_life_balance,
-    people_rating = data.people_rating,
-    benefits = data.benefits,
-    opportunities = data.opportunities,
-    management = data.senior_management;
-
-    let rating = ((salary / 1800) * 0.40 ) + (work_life * 0.1) + (management * 0.05) + (benefits * 0.05) + (opportunities * 0.15) + (people_rating * 0.25);
+rating = function({average_salary: salary, work_life_balance: work_life, people_rating, benefits, opportunities, senior_management: management}){
+    let rating = (salary / 1800 * 0.6) + ((work_life - 50) * 0.5) + ((management - 50) * 0.4) + ((benefits - 50) * 0.3) + ((opportunities - 50) * 0.6) + (people_rating - 50);
     return Math.round(rating);
 }

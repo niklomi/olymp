@@ -11,7 +11,7 @@ __checkEmail = function(email){
     return re.test(email);
 }
 
-letter_grade = function(data){
+letterGrade = function(data){
     let grade;
     if (data >= 95) {
         grade = "A+";
@@ -37,7 +37,7 @@ letter_grade = function(data){
     return grade;
 }
 
-letter_grade_color = function(data){
+letterGradeColor = function(data){
     let grade;
     if (data >= 85) {
         grade = "aa";
@@ -54,7 +54,7 @@ letter_grade_color = function(data){
     return grade;
 }
 
-interview_difficulty_color = function(data){
+interviewDiffGradeColor = function(data){
     let grade;
     if (data >= 90) {
         grade = "ff";
@@ -71,7 +71,7 @@ interview_difficulty_color = function(data){
     return grade;
 }
 
-grade_interview_difficulty = function(data){
+interviewDifficultyGrade = function(data){
     let grade;
     if (data >= 90) {
         grade = "very hard";
@@ -88,7 +88,7 @@ grade_interview_difficulty = function(data){
     return grade;
 }
 
-grade_interview_experience = function(data){
+interviewExpGrade = function(data){
     let grade;
     if (53.3 <= data && data <= 80) {
         grade = "good";
@@ -102,7 +102,7 @@ grade_interview_experience = function(data){
     return grade;
 }
 
-interview_experience_color = function(data){
+interviewExpGradeColor = function(data){
     let grade;
     if (53.3 <= data && data <= 80) {
         grade = "aa";
@@ -116,7 +116,7 @@ interview_experience_color = function(data){
     return grade;
 }
 
-rating_color = function(data){
+ratingGradeColor = function(data){
     let grade;
     if (data >= 66) {
         grade = "aa";
