@@ -5,7 +5,7 @@ Template.table.onCreated(function(){
 
     self.ready = new ReactiveVar();
     self.active = new ReactiveVar();
-    self.piar = new ReactiveVar(_.first(_.shuffle(_piar), 3));
+    self.piar = new ReactiveVar(_.first(_.shuffle(piarArray), 3));
 
     self.autorun(function(){
         FlowRouter.watchPathChange();

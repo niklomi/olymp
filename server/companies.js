@@ -21,7 +21,7 @@ Companies.before.insert(function (userId, doc) {
     doc.rating = rating(doc);
 });
 
-update_all_rating = function(make_null = false){
+updateRating = function(make_null = false){
     let companies = Companies.find().fetch();
 
     _.each(companies, function(data){

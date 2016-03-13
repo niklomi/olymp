@@ -11,7 +11,7 @@ Template.poloskaSubscribe.events({
     e.preventDefault();
     let email = e.target.email.value.trim();
     if (email.length === 0) return false;
-    if (!__checkEmail(email)) {
+    if (!checkEmail(email)) {
       $('#email').addClass('animated shake');
     } else {
       Meteor.call('emailSubscribe', email, function(err, res){

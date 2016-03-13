@@ -1,29 +1,29 @@
 Template.registerHelper("grade", function(data){
-  return letterGrade(data);
+  return gradeLetter(data);
 });
 
-Template.registerHelper("grade_color", function(data){
-  return letterGradeColor(data);
+Template.registerHelper("gradeColor", function(data){
+  return gradeColor(data);
 });
 
-Template.registerHelper("interviewDifficultyGrade", function(data){
-  return interviewDifficultyGrade(data);
+Template.registerHelper("gradeInterviewDifficulty", function(data){
+  return gradeInterviewDifficulty(data);
 });
 
-Template.registerHelper("interviewDiffGradeColor", function(data){
-  return interviewDiffGradeColor(data);
+Template.registerHelper("gradeColorInterviewDifficulty", function(data){
+  return gradeColorInterviewDifficulty(data);
 });
 
-Template.registerHelper("interviewExpGrade", function(data){
-  return interviewExpGrade(data);
+Template.registerHelper("gradeInterviewExperience", function(data){
+  return gradeInterviewExperience(data);
 });
 
-Template.registerHelper("interviewExpGradeColor", function(data){
-  return interviewExpGradeColor(data);
+Template.registerHelper("gradeColorInterviewExperience", function(data){
+  return gradeColorInterviewExperience(data);
 });
 
-Template.registerHelper("ratingGradeColor", function(data){
-  return ratingGradeColor(data);
+Template.registerHelper("gradeColorRating", function(data){
+  return gradeColorRating(data);
 });
 
 Template.registerHelper('workersCount', function(data){

@@ -1,4 +1,4 @@
-_piar = [
+piarArray = [
     {
         piar : true,
         text : `Want to <a href="http://remotewolfy.com" class="a-white border-text-1px"><b>work remotely</b></a> as a designer, developer or engineer?`,

@@ -55,4 +55,9 @@ gadicohen:sitemaps
 wizonesolutions:canonical
 ongoworks:spiderable
 
+#Monitoring
+meteorhacks:kadira-profiler
+meteorhacks:kadira
+meteorhacks:zones
+
 npm-container

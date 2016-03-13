@@ -6,12 +6,12 @@ random = function(min = 1, max = 100){
     return Math.round(Math.random() * (max - min) + min);
 }
 
-__checkEmail = function(email){
+checkEmail = function(email){
     let re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     return re.test(email);
 }
 
-letterGrade = function(data){
+gradeLetter = function(data){
     let grade;
     if (data >= 95) {
         grade = "A+";
@@ -37,7 +37,7 @@ letterGrade = function(data){
     return grade;
 }
 
-letterGradeColor = function(data){
+gradeColor = function(data){
     let grade;
     if (data >= 85) {
         grade = "aa";
@@ -54,7 +54,7 @@ letterGradeColor = function(data){
     return grade;
 }
 
-interviewDiffGradeColor = function(data){
+gradeColorInterviewDifficulty = function(data){
     let grade;
     if (data >= 90) {
         grade = "ff";
@@ -71,7 +71,7 @@ interviewDiffGradeColor = function(data){
     return grade;
 }
 
-interviewDifficultyGrade = function(data){
+gradeInterviewDifficulty = function(data){
     let grade;
     if (data >= 90) {
         grade = "very hard";
@@ -88,7 +88,7 @@ interviewDifficultyGrade = function(data){
     return grade;
 }
 
-interviewExpGrade = function(data){
+gradeInterviewExperience = function(data){
     let grade;
     if (53.3 <= data && data <= 80) {
         grade = "good";
@@ -102,7 +102,7 @@ interviewExpGrade = function(data){
     return grade;
 }
 
-interviewExpGradeColor = function(data){
+gradeColorInterviewExperience = function(data){
     let grade;
     if (53.3 <= data && data <= 80) {
         grade = "aa";
@@ -116,7 +116,7 @@ interviewExpGradeColor = function(data){
     return grade;
 }
 
-ratingGradeColor = function(data){
+gradeColorRating = function(data){
     let grade;
     if (data >= 66) {
         grade = "aa";
