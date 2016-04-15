@@ -3,9 +3,9 @@
 button, .button
     outline: none;
     border-radius:4px
-    border:2px solid $main-color
-    background-color: $main-color
-    color: #fff
+    border: 2px solid $main-color
+    background-color: transparent
+    color: $main-color
     min-width: 6rem;
     height: 4rem;
     padding: 7px 15px;
@@ -17,48 +17,33 @@ button, .button
     -o-transition: all .05s ease-in-out;
     transition: all .05s ease-in-out;
     &:hover
-        background-color: #fff
+        background-color: $main-color
         border-color: $main-color
-        color: $main-color
-    &:focus
+        color: #fff
+
+.button-reverse
+    border-color: $main-color
+    background-color: $main-color
+    color: #fff
+    &:hover
         background-color: #fff
         border-color: $main-color
         color: $main-color
 
-.button--reverse
-    background-color: #fff
+.button-on-red
+    background-color: transparent
     border-color: #fff
-    color: $main-color
+    color: #fff
     &:hover
-        background-color: transparent
+        background-color: #fff
         border-color: #fff
-        color: #fff
-    &:focus
-        background-color: transparent
-        border-color: #fff
-        color: #fff
+        color: $main-color
 
-.button--tweet
-    background-color: #fff
+.button-tweet-on-blue
+    background-color: transparent
+    color: #fff
     border-color: #fff
-    color: #55ACEE
     &:hover
-        background-color: #55ACEE
+        background-color: #fff
         border-color: #fff
-        color: #fff
-    &:focus
-        border: 2px solid #fff
         color: #55ACEE
-        background-color: #fff
-
-.button--tweet--reverse
-    background-color: #FFF
-    color: #55ACEE
-    &:hover
-        background-color: #55ACEE
-        border-color: #55ACEE
-        color: #fff
-    &:focus
-        border-color:#55ACEE
-        color: #FFF
-        background-color: #55ACEE

@@ -14,15 +14,15 @@
                 </h2>
                 <div class="give-me-invite-slack">
                     {{#unless invite}}
-                    	<form id="slack-form">
-                    		<input type="email" placeholder="you@yourdomain.com" />
-                    		<button type="submit" class="button button-action button-main">Get My Invite</button>
-                    	</form>
-                    	{{#if error}}
-                    		<div class="message error">{{error}}</div>
-                    	{{/if}}
+                        <form id="slack-form">
+                            <input type="email" placeholder="you@yourdomain.com" />
+                            <button type="submit" class="button button-action button-reverse button-main">Get My Invite</button>
+                        </form>
+                        {{#if error}}
+                            <div class="message error">{{error}}</div>
+                        {{/if}}
                     {{else}}
-                    	<div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong></div>
+                        <div class="message"><strong>Success! </strong>Check your email for an invite from <strong>{{slack.name}}</strong></div>
                     {{/unless}}
                 </div>
             </div>

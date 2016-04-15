@@ -4,7 +4,7 @@
             <p>
                 {{{text}}} {{#if feedbackText}} <span class="border-text-1px"> {{> showFeedback text=feedbackText dontBeLink=true}} </span> {{/if}}
             </p>
-            {{#if buttonText}}<a href="{{buttonLink}}" target="_blank" class="button {{#if twitter}}button--tweet{{else}}button--reverse{{/if}} width-100-sm">{{{buttonText}}}</a>{{/if}}
+            {{#if buttonText}}<a href="{{buttonLink}}" target="_blank" class="button {{#if twitter}}button-tweet-on-blue{{else}}button-on-red{{/if}} width-100-sm">{{{buttonText}}}</a>{{/if}}
         </td>
     </tr>
 </template>
